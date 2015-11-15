@@ -1,9 +1,9 @@
 # RamblerTyphoonUtils
 
-[![CI Status](http://img.shields.io/travis/Egor Tolstoy/RamblerTyphoonUtils.svg?style=flat)](https://travis-ci.org/Egor Tolstoy/RamblerTyphoonUtils)
-[![Version](https://img.shields.io/cocoapods/v/RamblerTyphoonUtils.svg?style=flat)](http://cocoapods.org/pods/RamblerTyphoonUtils)
-[![License](https://img.shields.io/cocoapods/l/RamblerTyphoonUtils.svg?style=flat)](http://cocoapods.org/pods/RamblerTyphoonUtils)
-[![Platform](https://img.shields.io/cocoapods/p/RamblerTyphoonUtils.svg?style=flat)](http://cocoapods.org/pods/RamblerTyphoonUtils)
+[Typhoon](https://github.com/appsquickly/Typhoon) is a great tool, and iOS team in Rambler&Co loves it a lot. Besides actual contributing, we've developed some useful tools which cannot be included in the main project.
+
+1. RamblerInitialAssemblyCollector - this class can be used for activating assemblies on startup instead of plist integration.
+2. RamblerTyphoonAssemblyTests - A base test class used for TyphoonAssembly testing.
 
 ## Usage
 
@@ -13,12 +13,18 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-RamblerTyphoonUtils is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+RamblerTyphoonUtils is available through [CocoaPods](http://cocoapods.org). To use the `AssemblyCollector`:
 
 ```ruby
-pod "RamblerTyphoonUtils"
+pod "RamblerTyphoonUtils/AssemblyCollector"
 ```
+
+To use the `AssemblyTesting`:
+```ruby
+pod "RamblerTyphoonUtils/AssemblyTesting"
+```
+
+**Warning:** do not include `AssemblyTesting` subspec in the main target!
 
 ## Authors
 
