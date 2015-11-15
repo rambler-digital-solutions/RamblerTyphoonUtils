@@ -9,6 +9,69 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+#### AssemblyCollector
+
+At first, make your assemblies conform the `RamblerInitialAssembly` protocol:
+
+```objc
+@interface ApplicationAssembly : TyphoonAssembly <RamblerInitialAssembly>
+
+@end
+```
+
+Then, instead of adding this assembly in the `Info.plist` file, add the following code in the `AppDelegate`:
+
+```objc
+@implementation AppDelegate
+
+- (NSArray *)initialAssemblies {
+    RamblerInitialAssemblyCollector *collector = [RamblerInitialAssemblyCollector new];
+    return [collector collectInitialAssemblyClasses];
+}
+
+@end
+```
+
+The `RamblerInitialAssemblyCollector` will find your assembly in the runtime and automatically activate it.
+
+#### AssemblyTesting
+
+Inherit your test from the `RamblerTyphoonAssemblyTests`:
+
+```objc
+@interface RamblerApplicationAssemblyTests : RamblerTyphoonAssemblyTests
+
+@property (strong, nonatomic) RamblerApplicationAssembly *assembly;
+
+@end
+```
+
+Write new tests: one per your assembly method:
+
+```objc
+- (void)testThatAssemblyCreatesAppDelegate {
+    // given
+    Class expectedClass = [RamblerAppDelegate class];
+    NSArray *dependencies = @[
+                              RamblerSelector(injectedString)
+                              ];
+    
+    // when
+    id result = [self.assembly appDelegate];
+    
+    // then
+    [self verifyTargetDependency:result
+                       withClass:expectedClass
+                    dependencies:dependencies];
+}
+```
+
+You are testing the following things:
+- The target object is created
+- The result is of the required class
+- The result has all of the listed dependencies
+- Dependencies are of the right classes
+
 ## Requirements
 
 ## Installation
