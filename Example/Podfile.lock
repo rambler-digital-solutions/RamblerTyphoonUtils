@@ -1,0 +1,24 @@
+PODS:
+  - RamblerTyphoonUtils (1.0.0):
+    - RamblerTyphoonUtils/AssemblyCollector (= 1.0.0)
+    - RamblerTyphoonUtils/AssemblyTesting (= 1.0.0)
+  - RamblerTyphoonUtils/AssemblyCollector (1.0.0)
+  - RamblerTyphoonUtils/AssemblyTesting (1.0.0)
+  - Typhoon (3.4.3):
+    - Typhoon/no-arc (= 3.4.3)
+  - Typhoon/no-arc (3.4.3)
+
+DEPENDENCIES:
+  - RamblerTyphoonUtils (from `../`)
+  - RamblerTyphoonUtils/AssemblyCollector (from `../`)
+  - Typhoon
+
+EXTERNAL SOURCES:
+  RamblerTyphoonUtils:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RamblerTyphoonUtils: bafad8fd42ca7df9239d2ccb68021ba21d81d741
+  Typhoon: 382b918b31d5d19a82922448af65f01f08102dc6
+
+COCOAPODS: 0.38.2
