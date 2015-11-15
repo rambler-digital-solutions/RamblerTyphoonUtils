@@ -2,8 +2,8 @@
 
 [Typhoon](https://github.com/appsquickly/Typhoon) is a great tool, and iOS team in Rambler&Co loves it a lot. Besides actual contributing, we've developed some useful tools which cannot be included in the main project.
 
-1. RamblerInitialAssemblyCollector - this class can be used for activating assemblies on startup instead of plist integration.
-2. RamblerTyphoonAssemblyTests - A base test class used for TyphoonAssembly testing.
+1. `RamblerInitialAssemblyCollector` - this class can be used for activating assemblies on startup instead of plist integration.
+2. `RamblerTyphoonAssemblyTests` - A base test class used for `TyphoonAssembly` testing.
 
 ## Usage
 
