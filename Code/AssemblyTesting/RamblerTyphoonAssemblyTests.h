@@ -50,6 +50,19 @@
 /**
  @author Aleksandr Sychev
  
+ Method for testing an object, created via TyphoonAssembly, and its protocol
+ 
+ @param targetObject Created object
+ @param targetClass  The target class
+ @param protocols    NSArray with protocols names
+ */
+- (void)verifyTargetDependency:(id)targetObject
+                     withClass:(Class)targetClass
+         conformingToProtocols:(NSArray *)protocols;
+
+/**
+ @author Aleksandr Sychev
+ 
  Method for testing an object, created via TyphoonAssembly, its protocol and all of its dependencies
  
  @param targetObject Created object

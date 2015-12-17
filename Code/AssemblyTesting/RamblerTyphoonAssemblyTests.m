@@ -40,6 +40,15 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
 
 - (void)verifyTargetDependency:(id)targetObject
                      withClass:(Class)targetClass
+         conformingToProtocols:(NSArray *)protocols {
+    [self verifyTargetDependency:targetObject
+                       withClass:targetClass
+           conformingToProtocols:protocols
+                    dependencies:nil];
+}
+
+- (void)verifyTargetDependency:(id)targetObject
+                     withClass:(Class)targetClass
          conformingToProtocols:(NSArray *)protocols
                   dependencies:(NSArray *)dependencies {
     // Verifying the object class
