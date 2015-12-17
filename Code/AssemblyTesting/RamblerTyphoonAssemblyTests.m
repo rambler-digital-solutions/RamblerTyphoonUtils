@@ -25,12 +25,36 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
 }
 
 - (void)verifyTargetDependency:(id)targetObject
+                  withProtocol:(Protocol *)targetProtocol {
+    XCTAssertTrue([targetObject conformsToProtocol:targetProtocol]);
+}
+
+- (void)verifyTargetDependency:(id)targetObject
                      withClass:(Class)targetClass
+                  dependencies:(NSArray *)dependencies {
+    [self verifyTargetDependency:targetObject
+                       withClass:targetClass
+           conformingToProtocols:nil
+                    dependencies:dependencies];
+}
+
+- (void)verifyTargetDependency:(id)targetObject
+                     withClass:(Class)targetClass
+         conformingToProtocols:(NSArray *)protocols
                   dependencies:(NSArray *)dependencies {
     // Verifying the object class
     [self verifyTargetDependency:targetObject
                        withClass:targetClass];
     
+    // Verifying object's conformance to protocols
+    NSMutableArray *allProtocols = [[RamblerTyphoonAssemblyTestUtilities protocolsForHierarchyOfClass:targetClass] mutableCopy];
+    for (NSString *protocolName in [allProtocols copy]) {
+        if ([protocols containsObject:protocolName]) {
+            Protocol *protocol = NSProtocolFromString(protocolName);
+            [self verifyTargetDependency:targetObject withProtocol:protocol];
+        }
+    }
+
     // Filtering the properties of the class
     NSMutableDictionary *allProperties = [[RamblerTyphoonAssemblyTestUtilities propertiesForHierarchyOfClass:targetClass] mutableCopy];
     for (NSString *propertyName in [allProperties allKeys]) {
@@ -39,6 +63,7 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
         }
     }
     
+    // Verifying dependencies
     [self verifyTargetObject:targetObject
                 dependencies:allProperties];
 }

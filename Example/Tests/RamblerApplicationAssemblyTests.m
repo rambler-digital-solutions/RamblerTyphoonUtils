@@ -34,19 +34,19 @@
     [super tearDown];
 }
 
-- (void)testThatAssemblyCreatesAppDelegate {
+- (void)testThatAssemblyCreatesAppDelegateConformingToProtocol {
     // given
     Class expectedClass = [RamblerAppDelegate class];
-    NSArray *dependencies = @[
-                              RamblerSelector(injectedString)
-                              ];
-    
+    NSArray *dependencies = @[ RamblerSelector(injectedString) ];
+    NSArray *protocols = @[ RamblerProtocol(UIApplicationDelegate) ];
+
     // when
     id result = [self.assembly appDelegate];
-    
+
     // then
     [self verifyTargetDependency:result
                        withClass:expectedClass
+           conformingToProtocols:protocols
                     dependencies:dependencies];
 }
 
