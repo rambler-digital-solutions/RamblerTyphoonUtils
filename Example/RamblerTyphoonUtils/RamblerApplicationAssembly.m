@@ -17,6 +17,8 @@
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(injectedString)
                                                     with:@"Hello, Rambler&Co!"];
+                              [definition injectProperty:@selector(injectedProtocolString)
+                                                    with:@"Hello, Rambler&Co!"];
                           }];
 }
 
