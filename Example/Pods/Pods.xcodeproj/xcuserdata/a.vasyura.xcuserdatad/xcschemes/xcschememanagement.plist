@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-RamblerTyphoonUtils_Example-RamblerTyphoonUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RamblerTyphoonUtils_Example.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-RamblerTyphoonUtils_Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Typhoon.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4EE1453AFDDFB9D6DAC05C3EEF0062D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>816673CB9317C2200D6ECD5684667745</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C93139A49ABEB05BEEE8982B8781B3C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1106EA94AC6E4D7288CE7FC952F7E0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDFC9E50AFFB8E4F028E64AA6D88C045</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8EA590F7AEDA8C849A29D16E1B9DE74874C3D86B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8EA590F7AEDA8C849A29D16E1B9DE74874C3D86B" : 0,
+    "2AC74E2ED81191E39B54361197FFFB52EA49D6A4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EA36196D-E53C-471B-B993-91D40E5C30E6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8EA590F7AEDA8C849A29D16E1B9DE74874C3D86B" : "RamblerTyphoonUtils\/",
+    "2AC74E2ED81191E39B54361197FFFB52EA49D6A4" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RamblerTyphoonUtils",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/RamblerTyphoonUtils.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.rambler.ru:mobile-dev\/livejournal-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2AC74E2ED81191E39B54361197FFFB52EA49D6A4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/juyka\/RamblerTyphoonUtils.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8EA590F7AEDA8C849A29D16E1B9DE74874C3D86B"
+    }
+  ]
+}
