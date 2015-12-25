@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *injectedString;
+@property (strong, nonatomic) NSString<NSObject> *injectedProtocolString;
 
 @end
