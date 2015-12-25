@@ -67,9 +67,8 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
             }
                 
             case RamblerProtocol: {
-                NSString *protocolName = [dependencyExpectedType substringWithRange:NSMakeRange(1, dependencyExpectedType.length - 2)];
-                Protocol *expectedProtocol = NSProtocolFromString(protocolName);
-                XCTAssertTrue([dependencyObject conformsToProtocol:expectedProtocol], @"Свойство %@ объекта %@ не имплементирует протокол %@", propertyName, targetObject, protocolName);
+                NSString *protocolName = [self protocolNameByExpectedType:dependencyExpectedType];
+                Protocol *expectedProtocol = NSProtocolFromString(protocolName);                XCTAssertTrue([dependencyObject conformsToProtocol:expectedProtocol], @"Свойство %@ объекта %@ не имплементирует протокол %@", propertyName, targetObject, protocolName);
                 break;
             }
                 
@@ -78,6 +77,19 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
                 break;
         }
     }
+}
+
+- (NSString *)protocolNameByExpectedType:(NSString *)type {
+    NSRange   searchedRange = NSMakeRange(0, [type length]);
+    NSString *pattern = @"<(.*?)>";
+    NSError  *error = nil;
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                                           options:0
+                                                                             error:&error];
+    NSTextCheckingResult *match = [regex firstMatchInString:type options:0 range:searchedRange];
+    NSString *protocolName = [type substringWithRange:[match rangeAtIndex:1]];
+    
+    return protocolName;
 }
 
 - (RamblerPropertyType)propertyTypeByString:(NSString *)propertyTypeString {

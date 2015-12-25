@@ -38,7 +38,8 @@
     // given
     Class expectedClass = [RamblerAppDelegate class];
     NSArray *dependencies = @[
-                              RamblerSelector(injectedString)
+                              RamblerSelector(injectedString),
+                              RamblerSelector(injectedProtocolString)
                               ];
     
     // when
