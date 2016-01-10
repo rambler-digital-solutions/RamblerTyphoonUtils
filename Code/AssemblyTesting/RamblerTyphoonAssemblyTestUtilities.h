@@ -33,26 +33,4 @@
  */
 + (NSDictionary *)propertiesOfClass:(Class)objectClass;
 
-/**
- @author Aleksandr Sychev
-
- Returns all of the target class protocols names, including base classes protocols.
-
- @param objectClass The target class
-
- @return NSArray
- */
-+ (NSArray *)protocolsForHierarchyOfClass:(Class)objectClass;
-
-/**
- @author Aleksandr Sychev
-
- Returns all of the target class protocols names, not-including base classes protocols.
-
- @param objectClass The target class
-
- @return NSArray
- */
-+ (NSArray *)protocolsOfClass:(Class)objectClass;
-
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "RamblerTyphoonAssemblyTests.h"
+
+#import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"
 #import "RamblerTyphoonAssemblyTestUtilities.h"
 
 typedef NS_ENUM(NSInteger, RamblerPropertyType) {
@@ -19,50 +21,24 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
 
 @implementation RamblerTyphoonAssemblyTests
 
-- (void)verifyTargetDependency:(id)targetObject
-                     withClass:(Class)targetClass {
-    XCTAssertTrue([targetObject isKindOfClass:targetClass]);
-}
+#pragma mark - Public
 
 - (void)verifyTargetDependency:(id)targetObject
-                  withProtocol:(Protocol *)targetProtocol {
-    XCTAssertTrue([targetObject conformsToProtocol:targetProtocol]);
-}
-
-- (void)verifyTargetDependency:(id)targetObject
-                     withClass:(Class)targetClass
-                  dependencies:(NSArray *)dependencies {
-    [self verifyTargetDependency:targetObject
-                       withClass:targetClass
-           conformingToProtocols:nil
-                    dependencies:dependencies];
+                withDescriptor:(RamblerTyphoonAssemblyTestsTypeDescriptor *)targetTypeDescriptor {
+    XCTAssertTrue([targetObject isKindOfClass:targetTypeDescriptor.describedClass],
+                  @"Неверный класс объекта %@", targetObject);
+    for (Protocol *protocol in targetTypeDescriptor.conformingProtocols) {
+        XCTAssertTrue([targetObject conformsToProtocol:protocol],
+                      @"Объект %@ не имплементирует протокол <%@>", targetObject, NSStringFromProtocol(protocol));
+    }
 }
 
 - (void)verifyTargetDependency:(id)targetObject
                      withClass:(Class)targetClass
-         conformingToProtocols:(NSArray *)protocols {
-    [self verifyTargetDependency:targetObject
-                       withClass:targetClass
-           conformingToProtocols:protocols
-                    dependencies:nil];
-}
-
-- (void)verifyTargetDependency:(id)targetObject
-                     withClass:(Class)targetClass
-         conformingToProtocols:(NSArray *)protocols
                   dependencies:(NSArray *)dependencies {
     // Verifying the object class
-    [self verifyTargetDependency:targetObject
-                       withClass:targetClass];
-    
-    // Verifying object's conformance to protocols
-    NSMutableArray *allProtocols = [[RamblerTyphoonAssemblyTestUtilities protocolsForHierarchyOfClass:targetClass] mutableCopy];
-    for (NSString *protocolName in [allProtocols copy]) {
-        if ([protocols containsObject:protocolName]) {
-            Protocol *protocol = NSProtocolFromString(protocolName);
-            [self verifyTargetDependency:targetObject withProtocol:protocol];
-        }
-    }
+//    [self verifyTargetDependency:targetObject
+//                       withClass:targetClass];
 
     // Filtering the properties of the class
     NSMutableDictionary *allProperties = [[RamblerTyphoonAssemblyTestUtilities propertiesForHierarchyOfClass:targetClass] mutableCopy];
@@ -76,6 +52,8 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
     [self verifyTargetObject:targetObject
                 dependencies:allProperties];
 }
+
+#pragma mark - Helpers
 
 - (void)verifyTargetObject:(id)targetObject
               dependencies:(NSDictionary *)dependencies {
@@ -133,6 +111,5 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
     
     return RamblerClass;
 }
-
 
 @end

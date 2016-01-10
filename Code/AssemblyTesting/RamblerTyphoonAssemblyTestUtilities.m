@@ -12,6 +12,8 @@
 
 @implementation RamblerTyphoonAssemblyTestUtilities
 
+#pragma mark - Public
+
 + (NSDictionary *)propertiesForHierarchyOfClass:(Class)objectClass {
     NSMutableDictionary *properties = [NSMutableDictionary dictionary];
     [self propertiesForHierarchyOfClass:objectClass
@@ -25,18 +27,7 @@
                           onDictionary:properties];
 }
 
-+ (NSArray *)protocolsForHierarchyOfClass:(Class)objectClass {
-    NSMutableArray *protocols = [NSMutableArray new];
-    [self protocolsForHierarchyOfClass:objectClass
-                               onArray:protocols];
-    return [protocols copy];
-}
-
-+ (NSArray *)protocolsOfClass:(Class)objectClass {
-    NSMutableArray *protocols = [NSMutableArray new];
-    [self protocolsForClass:objectClass onArray:protocols];
-    return [protocols copy];
-}
+#pragma mark - Helpers
 
 + (NSMutableDictionary *)propertiesForHierarchyOfClass:(Class)class
                                           onDictionary:(NSMutableDictionary *)properties {
@@ -68,36 +59,6 @@
     free(objcProperties);
     
     return properties;
-}
-
-+ (NSMutableArray *)protocolsForHierarchyOfClass:(Class)class
-                                         onArray:(NSMutableArray *)protocols {
-    [self protocolsForClass:class
-                    onArray:protocols];
-    
-    if (class == [NSObject class]) {
-        return protocols;
-    }
-    
-    return [self protocolsForHierarchyOfClass:[class superclass]
-                                  onArray:protocols];
-}
-
-+ (NSMutableArray *)protocolsForClass:(Class)class
-                              onArray:(NSMutableArray *)protocols {
-    unsigned int outCount, i;
-    Protocol * __unsafe_unretained *objcProtocols = class_copyProtocolList(class, &outCount);
-    for (i = 0; i < outCount; i++) {
-        Protocol *protocol = objcProtocols[i];
-        const char *protocolName = protocol_getName(protocol);
-        if (protocolName) {
-            NSString *protocolStringName = [NSString stringWithUTF8String:protocolName];
-            [protocols addObject:protocolStringName];
-        }
-    }
-    free(objcProtocols);
-    
-    return protocols;
 }
 
 static const char *getPropertyType(objc_property_t property) {

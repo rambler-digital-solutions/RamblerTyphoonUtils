@@ -22,4 +22,10 @@
     return [collector collectInitialAssemblyClasses];
 }
 
+#pragma mark - RamblerFooProtocol methods
+
+- (NSString *)foo {
+    return @"Foo";
+}
+
 @end

@@ -8,7 +8,9 @@
 
 @import UIKit;
 
-@interface RamblerAppDelegate : UIResponder <UIApplicationDelegate>
+#import "RamblerFooProtocol.h"
+
+@interface RamblerAppDelegate : UIResponder <UIApplicationDelegate, RamblerFooProtocol>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSString *injectedString;

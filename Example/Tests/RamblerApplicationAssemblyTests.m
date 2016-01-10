@@ -21,6 +21,8 @@
 
 @implementation RamblerApplicationAssemblyTests
 
+#pragma mark - Lifecycle
+
 - (void)setUp {
     [super setUp];
     
@@ -34,20 +36,23 @@
     [super tearDown];
 }
 
-- (void)testThatAssemblyCreatesAppDelegateConformingToProtocol {
+#pragma mark - Tests
+
+- (void)testThatAssemblyCreatesAppDelegateWithDependencies {
     // given
     Class expectedClass = [RamblerAppDelegate class];
-    NSArray *dependencies = @[ RamblerSelector(injectedString) ];
-    NSArray *protocols = @[ RamblerProtocol(UIApplicationDelegate) ];
+    NSArray *expectedProtocols = @[ @protocol(UIApplicationDelegate), @protocol(RamblerFooProtocol) ];
+    RamblerTyphoonAssemblyTestsTypeDescriptor *targetTypeDescriptor =
+        [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
+                                                          andProtocols:expectedProtocols];
+//    NSArray *dependencies = @[ RamblerSelector(injectedString) ];
 
     // when
     id result = [self.assembly appDelegate];
 
     // then
     [self verifyTargetDependency:result
-                       withClass:expectedClass
-           conformingToProtocols:protocols
-                    dependencies:dependencies];
+                  withDescriptor:targetTypeDescriptor];
 }
 
 @end
