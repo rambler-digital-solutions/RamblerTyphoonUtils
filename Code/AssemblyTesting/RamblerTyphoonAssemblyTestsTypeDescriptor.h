@@ -12,6 +12,8 @@
  @author Aleksandr Sychev
  
  Class describes testing types of target object or dependencies
+ 
+ @note We don't verify blocks and primitive types
  */
 @interface RamblerTyphoonAssemblyTestsTypeDescriptor : NSObject
 

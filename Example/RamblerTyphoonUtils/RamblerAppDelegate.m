@@ -13,7 +13,7 @@
 @implementation RamblerAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"%@", self.injectedString);
+    NSLog(@"\n%@\n%@", self.injectedString, self.injectedPropertyWithProtocols);
     return YES;
 }
 

@@ -45,14 +45,15 @@
     RamblerTyphoonAssemblyTestsTypeDescriptor *targetTypeDescriptor =
         [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
                                                           andProtocols:expectedProtocols];
-//    NSArray *dependencies = @[ RamblerSelector(injectedString) ];
+    NSArray *dependencies = @[ RamblerSelector(injectedString), RamblerSelector(injectedPropertyWithProtocols) ];
 
     // when
     id result = [self.assembly appDelegate];
 
     // then
     [self verifyTargetDependency:result
-                  withDescriptor:targetTypeDescriptor];
+                  withDescriptor:targetTypeDescriptor
+                    dependencies:dependencies];
 }
 
 @end

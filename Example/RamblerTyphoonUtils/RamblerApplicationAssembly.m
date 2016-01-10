@@ -9,6 +9,7 @@
 #import "RamblerApplicationAssembly.h"
 
 #import "RamblerAppDelegate.h"
+#import "RamblerBarFooObject.h"
 
 @implementation RamblerApplicationAssembly
 
@@ -16,8 +17,14 @@
     return [TyphoonDefinition withClass:[RamblerAppDelegate class]
                           configuration:^(TyphoonDefinition *definition) {
                               [definition injectProperty:@selector(injectedString)
-                                                    with:@"Hello, Rambler&Co!"];
+                                                    with:@"Hello, RAMBLER&Co!"];
+                              [definition injectProperty:@selector(injectedPropertyWithProtocols)
+                                                    with:[self barFooObject]];
                           }];
+}
+
+- (RamblerBarFooObject *)barFooObject {
+    return [TyphoonDefinition withClass:[RamblerBarFooObject class]];
 }
 
 @end

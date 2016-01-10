@@ -34,14 +34,15 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
 }
 
 - (void)verifyTargetDependency:(id)targetObject
-                     withClass:(Class)targetClass
+                withDescriptor:(RamblerTyphoonAssemblyTestsTypeDescriptor *)targetTypeDescriptor
                   dependencies:(NSArray *)dependencies {
     // Verifying the object class
-//    [self verifyTargetDependency:targetObject
-//                       withClass:targetClass];
+    [self verifyTargetDependency:targetObject
+                  withDescriptor:targetTypeDescriptor];
 
     // Filtering the properties of the class
-    NSMutableDictionary *allProperties = [[RamblerTyphoonAssemblyTestUtilities propertiesForHierarchyOfClass:targetClass] mutableCopy];
+    NSMutableDictionary *allProperties =
+        [[RamblerTyphoonAssemblyTestUtilities propertiesForHierarchyOfClass:targetTypeDescriptor.describedClass] mutableCopy];
     for (NSString *propertyName in [allProperties allKeys]) {
         if (![dependencies containsObject:propertyName] ) {
             [allProperties removeObjectForKey:propertyName];
@@ -65,27 +66,29 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         id dependencyObject = [targetObject performSelector:NSSelectorFromString(propertyName)];
 #pragma clang diagnostic pop
-        
+
         switch (propertyType) {
             case RamblerId: {
                 XCTAssertNotNil(dependencyObject, @"Свойство %@ объекта %@ не должно быть nil", propertyName, targetObject);
                 break;
             }
-                
+
             case RamblerClass: {
                 Class expectedClass = NSClassFromString(dependencyExpectedType);
-                XCTAssertTrue([dependencyObject isKindOfClass:expectedClass], @"Неверный класс свойства %@ объекта %@", propertyName, targetObject);
+                XCTAssertTrue([dependencyObject isKindOfClass:expectedClass],
+                              @"Неверный класс свойства %@ объекта %@", propertyName, targetObject);
                 break;
             }
-                
+
             case RamblerProtocol: {
-                NSString *protocolName = [dependencyExpectedType substringWithRange:NSMakeRange(1, dependencyExpectedType.length - 2)];
-                Protocol *expectedProtocol = NSProtocolFromString(protocolName);
-                XCTAssertTrue([dependencyObject conformsToProtocol:expectedProtocol], @"Свойство %@ объекта %@ не имплементирует протокол %@", propertyName, targetObject, protocolName);
+                RamblerTyphoonAssemblyTestsTypeDescriptor *propertyTypeDescriptor =
+                    [self typeDescriptorFromPropertyWithProtocol:dependencyExpectedType];
+                [self verifyTargetDependency:dependencyObject
+                              withDescriptor:propertyTypeDescriptor];
                 break;
             }
-                
-                // We don't verify blocks and primitive types
+
+            // We don't verify blocks and primitive types
             default:
                 break;
         }
@@ -110,6 +113,39 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
     }
     
     return RamblerClass;
+}
+
+- (RamblerTyphoonAssemblyTestsTypeDescriptor *)typeDescriptorFromPropertyWithProtocol:(NSString *)property {
+    NSUInteger classNameProtocolsNamesSeparatorIndex = [property rangeOfString:@"<"].location;
+    
+    /**
+     @author Aleksandr Sychev
+     
+     Find out property class
+     */
+    NSRange propertyClassNameSubstringRange = NSMakeRange(0u, classNameProtocolsNamesSeparatorIndex);
+    NSString *propertyClassNameSubstring = [property substringWithRange:propertyClassNameSubstringRange];
+    Class propertyClass = NSClassFromString(propertyClassNameSubstring);
+    
+    /**
+     @author Aleksandr Sychev
+     
+     Find out property protocols
+     */
+    NSString *propertyProtocolsNamesSubstring = [property substringFromIndex:classNameProtocolsNamesSeparatorIndex];
+    NSArray *rawProtocolsNames = [propertyProtocolsNamesSubstring componentsSeparatedByString:@"><"];
+    NSCharacterSet *protocolDeclarationSymbols = [NSCharacterSet characterSetWithCharactersInString:@"><"];
+    NSMutableArray *protocols = [NSMutableArray new];
+    for (NSString *rawProtocolName in rawProtocolsNames) {
+        NSString *protocolName =
+            [[rawProtocolName componentsSeparatedByCharactersInSet:protocolDeclarationSymbols] componentsJoinedByString:@""];
+        if (protocolName.length > 0u) {
+            [protocols addObject:NSProtocolFromString(protocolName)];
+        }
+    }
+
+    return [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:propertyClass
+                                                             andProtocols:[protocols copy]];
 }
 
 @end

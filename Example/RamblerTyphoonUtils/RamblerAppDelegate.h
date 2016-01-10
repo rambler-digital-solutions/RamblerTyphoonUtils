@@ -10,9 +10,13 @@
 
 #import "RamblerFooProtocol.h"
 
+@protocol RamblerBarProtocol;
+
 @interface RamblerAppDelegate : UIResponder <UIApplicationDelegate, RamblerFooProtocol>
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSString *injectedString;
+@property (nonatomic, strong) UIWindow *window;
+
+@property (nonatomic, strong) NSString *injectedString;
+@property (nonatomic, strong) id<RamblerBarProtocol, RamblerFooProtocol> injectedPropertyWithProtocols;
 
 @end

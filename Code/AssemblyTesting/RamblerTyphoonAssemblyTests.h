@@ -29,12 +29,12 @@
 /**
  Method for testing an object, created via TyphoonAssembly, and all of its dependencies
 
- @param targetDependency Created object
- @param targetClass      The target class
- @param dependencies     NSArray with dependencies names
+ @param targetDependency     Created object
+ @param targetTypeDescriptor The target type descriptor
+ @param dependencies         NSArray with dependencies names
  */
 - (void)verifyTargetDependency:(id)targetObject
-                     withClass:(Class)targetClass
+                withDescriptor:(RamblerTyphoonAssemblyTestsTypeDescriptor *)targetTypeDescriptor
                   dependencies:(NSArray *)dependencies;
 
 @end
