@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
     
     // Verifying that target object has all needed dependencies
     for (NSString *propertyName in dependencies) {
-        XCTAssertTrue([propertyNames containsObject:propertyName], @"У объекта %@ не было найдено свойство %@", targetObject, propertyName);
+        XCTAssertTrue([propertyNames containsObject:propertyName], @"For object %@ has not been found property %@", targetObject, propertyName);
     }
     
     // Filtering the properties of the class
