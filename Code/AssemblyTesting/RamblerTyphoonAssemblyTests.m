@@ -40,10 +40,18 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
     [self verifyTargetDependency:targetObject
                   withDescriptor:targetTypeDescriptor];
 
-    // Filtering the properties of the class
     NSMutableDictionary *allProperties =
         [[RamblerTyphoonAssemblyTestUtilities propertiesForHierarchyOfClass:targetTypeDescriptor.describedClass] mutableCopy];
-    for (NSString *propertyName in [allProperties allKeys]) {
+    NSArray *propertyNames = [allProperties allKeys];
+
+    // Verifying that target object has all needed dependencies
+    for (NSString *propertyName in dependencies) {
+        XCTAssertTrue([propertyNames containsObject:propertyName], @"For object %@ has not been found property %@", targetObject,
+                      propertyName);
+    }
+
+    // Filtering the properties of the class
+    for (NSString *propertyName in propertyNames) {
         if (![dependencies containsObject:propertyName] ) {
             [allProperties removeObjectForKey:propertyName];
         }

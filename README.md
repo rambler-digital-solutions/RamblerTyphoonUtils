@@ -93,7 +93,9 @@ pod "RamblerTyphoonUtils/AssemblyCollector"
 To use the `AssemblyTesting`:
 
 ```ruby
-pod "RamblerTyphoonUtils/AssemblyTesting"
+target 'ProjectNameTargetTests', :exclusive => true do
+    pod "RamblerTyphoonUtils/AssemblyTesting"
+end 
 ```
 
 **Warning:** do not include `AssemblyTesting` subspec in the main target!
