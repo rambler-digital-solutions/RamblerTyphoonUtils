@@ -21,6 +21,16 @@
 
 #pragma mark - Init
 
++ (instancetype)descriptorWithClass:(Class)describedClass {
+    return [[self class] descriptorWithClass:describedClass
+                                andProtocols:nil];
+}
+
+- (instancetype)initWithClass:(Class)describedClass {
+    return [self initWithClass:describedClass
+                  andProtocols:nil];
+}
+
 + (instancetype)descriptorWithProtocols:(NSArray *)conformingProtocols {
     return [[self class] descriptorWithClass:Nil
                                 andProtocols:conformingProtocols];

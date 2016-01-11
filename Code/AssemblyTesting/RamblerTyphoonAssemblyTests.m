@@ -54,6 +54,24 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
                 dependencies:allProperties];
 }
 
+#pragma mark - Obsolete methods
+
+- (void)verifyTargetDependency:(id)targetDependency
+                     withClass:(Class)targetClass {
+    [self verifyTargetDependency:targetDependency
+                       withClass:targetClass
+                    dependencies:nil];
+}
+
+- (void)verifyTargetDependency:(id)targetObject
+                     withClass:(Class)targetClass
+                  dependencies:(NSArray *)dependencies {
+    RamblerTyphoonAssemblyTestsTypeDescriptor *typeDescriptor = [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:targetClass];
+    [self verifyTargetDependency:targetObject
+                  withDescriptor:typeDescriptor
+                    dependencies:dependencies];
+}
+
 #pragma mark - Helpers
 
 - (void)verifyTargetObject:(id)targetObject

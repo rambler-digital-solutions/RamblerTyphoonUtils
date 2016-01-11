@@ -37,4 +37,27 @@
                 withDescriptor:(RamblerTyphoonAssemblyTestsTypeDescriptor *)targetTypeDescriptor
                   dependencies:(NSArray *)dependencies;
 
+
+#pragma mark - Obsolete methods
+
+/**
+ Method for testing an object, created via TyphoonAssembly
+ 
+ @param targetDependency Created object
+ @param targetClass      The target class
+ */
+- (void)verifyTargetDependency:(id)targetDependency
+                     withClass:(Class)targetClass __attribute__((deprecated));
+
+/**
+ Method for testing an object, created via TyphoonAssembly, and all of its dependencies
+ 
+ @param targetDependency Created object
+ @param targetClass      The target class
+ @param dependencies     NSArray with dependencies names
+ */
+- (void)verifyTargetDependency:(id)targetObject
+                     withClass:(Class)targetClass
+                  dependencies:(NSArray *)dependencies __attribute__((deprecated));
+
 @end

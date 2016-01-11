@@ -17,6 +17,8 @@
  */
 @interface RamblerTyphoonAssemblyTestsTypeDescriptor : NSObject
 
++ (instancetype)descriptorWithClass:(Class)describedClass;
+- (instancetype)initWithClass:(Class)describedClass;
 + (instancetype)descriptorWithProtocols:(NSArray *)conformingProtocols;
 - (instancetype)initWithProtocols:(NSArray *)conformingProtocols;
 + (instancetype)descriptorWithClass:(Class)describedClass
