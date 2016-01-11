@@ -133,16 +133,22 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
      Find out property protocols
      */
     NSString *propertyProtocolsNamesSubstring = [property substringFromIndex:classNameProtocolsNamesSeparatorIndex];
-    NSArray *rawProtocolsNames = [propertyProtocolsNamesSubstring componentsSeparatedByString:@"><"];
-    NSCharacterSet *protocolDeclarationSymbols = [NSCharacterSet characterSetWithCharactersInString:@"><"];
+    NSRange searchedRange = NSMakeRange(0u, propertyProtocolsNamesSubstring.length);
+    NSString *pattern = @"<(.*?)>";
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern
+                                                                           options:0u
+                                                                             error:NULL];
     NSMutableArray *protocols = [NSMutableArray new];
-    for (NSString *rawProtocolName in rawProtocolsNames) {
-        NSString *protocolName =
-            [[rawProtocolName componentsSeparatedByCharactersInSet:protocolDeclarationSymbols] componentsJoinedByString:@""];
-        if (protocolName.length > 0u) {
-            [protocols addObject:NSProtocolFromString(protocolName)];
-        }
-    }
+    [regex enumerateMatchesInString:propertyProtocolsNamesSubstring
+                            options:0u
+                              range:searchedRange
+                         usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                             NSRange range = [result rangeAtIndex:1u];
+                             NSString *protocolName = [propertyProtocolsNamesSubstring substringWithRange:range];
+                             if (protocolName.length > 0u) {
+                                 [protocols addObject:NSProtocolFromString(protocolName)];
+                             }
+                         }];
 
     return [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:propertyClass
                                                              andProtocols:[protocols copy]];
