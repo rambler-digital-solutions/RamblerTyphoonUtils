@@ -41,7 +41,10 @@
 - (void)testThatAssemblyCreatesAppDelegateWithDependencies {
     // given
     Class expectedClass = [RamblerAppDelegate class];
-    NSArray *expectedProtocols = @[ @protocol(UIApplicationDelegate), @protocol(RamblerFooProtocol) ];
+    NSArray *expectedProtocols = @[
+                                   @protocol(UIApplicationDelegate),
+                                   @protocol(RamblerFooProtocol)
+                                   ];
     RamblerTyphoonAssemblyTestsTypeDescriptor *targetTypeDescriptor =
         [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
                                                           andProtocols:expectedProtocols];
