@@ -56,7 +56,7 @@ Write new tests: one per your assembly method. To describe the type of a test ob
                                    @protocol(UIApplicationDelegate),
                                    @protocol(RamblerFooProtocol)
                                    ];
-    RamblerTyphoonAssemblyTestsTypeDescriptor *targetTypeDescriptor =
+    RamblerTyphoonAssemblyTestsTypeDescriptor *resultTypeDescriptor =
         [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
                                                           andProtocols:expectedProtocols];
     NSArray *dependencies = @[
@@ -69,7 +69,7 @@ Write new tests: one per your assembly method. To describe the type of a test ob
 
     // then
     [self verifyTargetDependency:result
-                  withDescriptor:targetTypeDescriptor
+                  withDescriptor:resultTypeDescriptor
                     dependencies:dependencies];
 }
 ```

@@ -45,7 +45,7 @@
                                    @protocol(UIApplicationDelegate),
                                    @protocol(RamblerFooProtocol)
                                    ];
-    RamblerTyphoonAssemblyTestsTypeDescriptor *targetTypeDescriptor =
+    RamblerTyphoonAssemblyTestsTypeDescriptor *resultTypeDescriptor =
         [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
                                                           andProtocols:expectedProtocols];
     NSArray *dependencies = @[
@@ -58,7 +58,7 @@
 
     // then
     [self verifyTargetDependency:result
-                  withDescriptor:targetTypeDescriptor
+                  withDescriptor:resultTypeDescriptor
                     dependencies:dependencies];
 }
 
