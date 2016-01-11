@@ -56,7 +56,10 @@ Write new tests: one per your assembly method. To describe the type of a test ob
     RamblerTyphoonAssemblyTestsTypeDescriptor *targetTypeDescriptor =
         [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
                                                           andProtocols:expectedProtocols];
-    NSArray *dependencies = @[ RamblerSelector(injectedString), RamblerSelector(injectedPropertyWithProtocols) ];
+    NSArray *dependencies = @[
+                              RamblerSelector(injectedString),
+                              RamblerSelector(injectedPropertyWithProtocols)
+                              ];
 
     // when
     id result = [self.assembly appDelegate];
