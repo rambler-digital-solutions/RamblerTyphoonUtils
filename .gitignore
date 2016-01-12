@@ -1,0 +1,70 @@
+## OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+._*
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xcuserdatad
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+
+## AppCode
+.idea
+
+## File-based project format:
+*.ipr
+*.iws
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# IntelliJ
+/out/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+## Code coverage
+*.gcno
+*.gcda
+
+## fastlane
+fastlane/report.xml
+fastlane/screenshots

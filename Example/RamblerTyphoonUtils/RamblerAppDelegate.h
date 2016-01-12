@@ -8,10 +8,15 @@
 
 @import UIKit;
 
-@interface RamblerAppDelegate : UIResponder <UIApplicationDelegate>
+#import "RamblerFooProtocol.h"
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) NSString *injectedString;
-@property (strong, nonatomic) NSString<NSObject> *injectedProtocolString;
+@protocol RamblerBarProtocol;
+
+@interface RamblerAppDelegate : UIResponder <UIApplicationDelegate, RamblerFooProtocol>
+
+@property (nonatomic, strong) UIWindow *window;
+
+@property (nonatomic, strong) NSString *injectedString;
+@property (nonatomic, strong) id<RamblerBarProtocol, RamblerFooProtocol> injectedPropertyWithProtocols;
 
 @end

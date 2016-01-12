@@ -15,11 +15,13 @@
 
 @interface RamblerApplicationAssemblyTests : RamblerTyphoonAssemblyTests
 
-@property (strong, nonatomic) RamblerApplicationAssembly *assembly;
+@property (nonatomic, strong) RamblerApplicationAssembly *assembly;
 
 @end
 
 @implementation RamblerApplicationAssemblyTests
+
+#pragma mark - Lifecycle
 
 - (void)setUp {
     [super setUp];
@@ -34,20 +36,29 @@
     [super tearDown];
 }
 
-- (void)testThatAssemblyCreatesAppDelegate {
+#pragma mark - Tests
+
+- (void)testThatAssemblyCreatesAppDelegateWithDependencies {
     // given
     Class expectedClass = [RamblerAppDelegate class];
+    NSArray *expectedProtocols = @[
+                                   @protocol(UIApplicationDelegate),
+                                   @protocol(RamblerFooProtocol)
+                                   ];
+    RamblerTyphoonAssemblyTestsTypeDescriptor *resultTypeDescriptor =
+        [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
+                                                          andProtocols:expectedProtocols];
     NSArray *dependencies = @[
                               RamblerSelector(injectedString),
-                              RamblerSelector(injectedProtocolString)
+                              RamblerSelector(injectedPropertyWithProtocols)
                               ];
-    
+
     // when
     id result = [self.assembly appDelegate];
-    
+
     // then
     [self verifyTargetDependency:result
-                       withClass:expectedClass
+                  withDescriptor:resultTypeDescriptor
                     dependencies:dependencies];
 }
 

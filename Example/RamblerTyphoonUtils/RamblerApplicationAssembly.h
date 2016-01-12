@@ -6,9 +6,8 @@
 //  Copyright © 2015 Egor Tolstoy. All rights reserved.
 //
 
-#import "TyphoonAssembly.h"
+#import <Typhoon/Typhoon.h>
 #import <RamblerTyphoonUtils/AssemblyCollector.h>
 
 @interface RamblerApplicationAssembly : TyphoonAssembly <RamblerInitialAssembly>
-
 @end

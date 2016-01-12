@@ -13,13 +13,19 @@
 @implementation RamblerAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"%@", self.injectedString);
+    NSLog(@"\n%@\n%@", self.injectedString, self.injectedPropertyWithProtocols);
     return YES;
 }
 
 - (NSArray *)initialAssemblies {
     RamblerInitialAssemblyCollector *collector = [RamblerInitialAssemblyCollector new];
     return [collector collectInitialAssemblyClasses];
+}
+
+#pragma mark - RamblerFooProtocol methods
+
+- (NSString *)foo {
+    return @"Foo";
 }
 
 @end

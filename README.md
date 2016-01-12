@@ -41,36 +41,44 @@ Inherit your test from the `RamblerTyphoonAssemblyTests`:
 ```objc
 @interface RamblerApplicationAssemblyTests : RamblerTyphoonAssemblyTests
 
-@property (strong, nonatomic) RamblerApplicationAssembly *assembly;
+@property (nonatomic, strong) RamblerApplicationAssembly *assembly;
 
 @end
 ```
 
-Write new tests: one per your assembly method:
+Write new tests: one per your assembly method. To describe the type of a test object use `RamblerTyphoonAssemblyTestsTypeDescriptor`. Don't forget that we don't verify blocks and primitive types: just only classes and protocols.
 
 ```objc
-- (void)testThatAssemblyCreatesAppDelegate {
+- (void)testThatAssemblyCreatesAppDelegateWithDependencies {
     // given
     Class expectedClass = [RamblerAppDelegate class];
+    NSArray *expectedProtocols = @[
+                                   @protocol(UIApplicationDelegate),
+                                   @protocol(RamblerFooProtocol)
+                                   ];
+    RamblerTyphoonAssemblyTestsTypeDescriptor *resultTypeDescriptor =
+        [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:expectedClass
+                                                          andProtocols:expectedProtocols];
     NSArray *dependencies = @[
-                              RamblerSelector(injectedString)
+                              RamblerSelector(injectedString),
+                              RamblerSelector(injectedPropertyWithProtocols)
                               ];
-    
+
     // when
     id result = [self.assembly appDelegate];
-    
+
     // then
     [self verifyTargetDependency:result
-                       withClass:expectedClass
+                  withDescriptor:resultTypeDescriptor
                     dependencies:dependencies];
 }
 ```
 
 You are testing the following things:
 - The target object is created
-- The result is of the required class
+- The result is of the required class and conforms to the required protocols
 - The result has all of the listed dependencies
-- Dependencies are of the right classes
+- Dependencies are of the right classes and conform to the required protocols
 
 ## Requirements
 
@@ -83,6 +91,7 @@ pod "RamblerTyphoonUtils/AssemblyCollector"
 ```
 
 To use the `AssemblyTesting`:
+
 ```ruby
 target 'ProjectNameTargetTests', :exclusive => true do
     pod "RamblerTyphoonUtils/AssemblyTesting"

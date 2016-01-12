@@ -9,5 +9,4 @@
 @import UIKit;
 
 @interface RamblerViewController : UIViewController
-
 @end
