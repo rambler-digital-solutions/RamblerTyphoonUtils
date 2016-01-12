@@ -149,6 +149,7 @@
 		9BD7734D59EF30769BAFC7EB0B583DCA /* TyphooniOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 612B7C530988A97D35ADFC91F0D71934 /* TyphooniOS.h */; };
 		9D7F18B8E1BB679643C6967A8299099C /* TyphoonRuntimeArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DCA816B9593BAF6A314297291E2531 /* TyphoonRuntimeArguments.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		9E9346E83796EC8ABAD12408DE1CD614 /* TyphoonAssemblyBuilder+PlistProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8278962A5B482CFF7B64A5B2EF0E03 /* TyphoonAssemblyBuilder+PlistProcessor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9F04C4B91C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F04C4B81C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.m */; };
 		9F6814B42966AF31C17DCA66D1211F5D /* TyphoonStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 982439BD40C28626B20B519E1B417D32 /* TyphoonStoryboard.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A0A63535F456A71BE76BDAF152EFE9CC /* AssemblyCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A5E778D121BE806116C59659A0ECAA /* AssemblyCollector.h */; };
 		A18CB1ED6BE7738204A37DAEAE5BE79A /* AssemblyTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = D79FB7E6898AAC4B56B5BC479D2CB1BC /* AssemblyTesting.h */; };
@@ -423,6 +424,8 @@
 		9C4AD49B5BB8F392399730D8B19C4441 /* TyphoonCallStack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TyphoonCallStack.m; path = Source/Factory/Internal/TyphoonCallStack.m; sourceTree = "<group>"; };
 		9C757FA5056B221B3275AECA6501EC51 /* Pods-RamblerTyphoonUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RamblerTyphoonUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E7A6E1957824194B46D0B92FA5717A5 /* TyphoonBlockComponentFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TyphoonBlockComponentFactory.h; path = Source/Factory/Internal/TyphoonBlockComponentFactory.h; sourceTree = "<group>"; };
+		9F04C4B71C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerTyphoonAssemblyTestsTypeDescriptor.h; sourceTree = "<group>"; };
+		9F04C4B81C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RamblerTyphoonAssemblyTestsTypeDescriptor.m; sourceTree = "<group>"; };
 		9F085FEF37957FC7C836797D91802664 /* OCLogTemplate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OCLogTemplate.h; path = Source/Vendor/OCLogTemplate/OCLogTemplate.h; sourceTree = "<group>"; };
 		9FFA57C6F15B3F38DA6D7E971AE91048 /* TyphoonComponentFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TyphoonComponentFactory.m; path = Source/Factory/TyphoonComponentFactory.m; sourceTree = "<group>"; };
 		A08542FAC4DC112790548FC20CD3647E /* TyphoonComponentFactory+InstanceBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TyphoonComponentFactory+InstanceBuilder.h"; path = "Source/Factory/Internal/TyphoonComponentFactory+InstanceBuilder.h"; sourceTree = "<group>"; };
@@ -836,6 +839,8 @@
 		6927149B775FA64AEBD5805AE78B7E76 /* AssemblyTesting */ = {
 			isa = PBXGroup;
 			children = (
+				9F04C4B71C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.h */,
+				9F04C4B81C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.m */,
 				0296E21E2B1256CB65D1FC3C09736187 /* RamblerTyphoonAssemblyTestUtilities.h */,
 				84FF0E432C1AF259F921CF9B70B47FBB /* RamblerTyphoonAssemblyTestUtilities.m */,
 				6C2CD320A0CB88AE2FF8E00C1955ED21 /* RamblerTyphoonAssemblyTests.h */,
@@ -1342,6 +1347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F04C4B91C44D0C900D2997A /* RamblerTyphoonAssemblyTestsTypeDescriptor.m in Sources */,
 				BF9669448586750358DB675793940AA9 /* Pods-RamblerTyphoonUtils_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
