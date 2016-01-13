@@ -80,6 +80,42 @@ typedef NS_ENUM(NSInteger, RamblerPropertyType) {
                     dependencies:dependencies];
 }
 
+- (void)verifyTargetDependency:(id)targetDependency
+                 withProtocols:(NSArray *)conformingProtocols {
+    [self verifyTargetDependency:targetDependency
+                   withProtocols:conformingProtocols
+                    dependencies:nil];
+}
+
+- (void)verifyTargetDependency:(id)targetObject
+                 withProtocols:(NSArray *)conformingProtocols
+                  dependencies:(NSArray *)dependencies {
+    RamblerTyphoonAssemblyTestsTypeDescriptor *typeDescriptor = [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithProtocols:conformingProtocols];
+    [self verifyTargetDependency:targetObject
+                  withDescriptor:typeDescriptor
+                    dependencies:dependencies];
+}
+
+- (void)verifyTargetDependency:(id)targetDependency
+                     withClass:(Class)targetClass
+                  andProtocols:(NSArray *)conformingProtocols {
+    [self verifyTargetDependency:targetDependency
+                       withClass:targetClass
+                    andProtocols:conformingProtocols
+                    dependencies:nil];
+}
+
+- (void)verifyTargetDependency:(id)targetObject
+                     withClass:(Class)targetClass
+                  andProtocols:(NSArray *)conformingProtocols
+                  dependencies:(NSArray *)dependencies {
+    RamblerTyphoonAssemblyTestsTypeDescriptor *typeDescriptor = [RamblerTyphoonAssemblyTestsTypeDescriptor descriptorWithClass:targetClass
+                                                                                                                  andProtocols:conformingProtocols];
+    [self verifyTargetDependency:targetObject
+                  withDescriptor:typeDescriptor
+                    dependencies:dependencies];
+}
+
 #pragma mark - Helpers
 
 - (void)verifyTargetObject:(id)targetObject
