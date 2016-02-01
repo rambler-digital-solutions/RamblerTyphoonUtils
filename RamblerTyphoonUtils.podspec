@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RamblerTyphoonUtils"
-  s.version          = "1.1.0"
+  s.version          = "1.2.0"
   s.summary          = "A collection of Typhoon utils and tools used by Rambler&Co."
 
   s.description      = <<-DESC
