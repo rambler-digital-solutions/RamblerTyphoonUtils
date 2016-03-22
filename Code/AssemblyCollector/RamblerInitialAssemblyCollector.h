@@ -20,4 +20,11 @@ This method returns an array of TyphoonAssemly classes which requires activation
 */
 - (NSArray *)collectInitialAssemblyClasses;
 
+/**
+ This method returns an array of TyphoonAssemlies which requires activation on startup, except assembly in parameter.
+ 
+ @return NSArray of TyphoonAssembly objects
+ */
+- (NSArray *)collectInitialAssembliesExceptOne:(id)excludedAssembly;
+
 @end

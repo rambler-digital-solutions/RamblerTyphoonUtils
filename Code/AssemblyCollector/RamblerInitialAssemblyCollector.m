@@ -32,4 +32,15 @@
     return [resultClasses allObjects];
 }
 
+- (NSArray *)collectInitialAssembliesExceptOne:(id)excludedAssembly {
+    NSArray<Class> *initialAssemblyClasses = [self collectInitialAssemblyClasses];
+    NSMutableArray *initialAssemblies = [@[] mutableCopy];
+    [initialAssemblyClasses enumerateObjectsUsingBlock:^(Class  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj != [excludedAssembly class]) {
+            [initialAssemblies addObject:[obj new]];
+        }
+    }];
+    return [initialAssemblies copy];
+}
+
 @end
