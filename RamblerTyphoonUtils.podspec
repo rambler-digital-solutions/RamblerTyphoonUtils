@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RamblerTyphoonUtils"
-  s.version          = "1.2.0"
+  s.version          = "1.3.0"
   s.summary          = "A collection of Typhoon utils and tools used by Rambler&Co."
 
   s.description      = <<-DESC
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.header_mappings_dir = 'Code'
+  s.source_files = "Code/Production/**/*.{h,m}"
 
   s.subspec 'AssemblyCollector' do |subspec|
-    subspec.source_files = "Code/AssemblyCollector.h", "Code/AssemblyCollector"
+    subspec.source_files = "Code/Production/AssemblyCollector.h", "Code/Production/AssemblyCollector/*.{h,m}"
   end
 
   s.subspec 'AssemblyTesting' do |subspec|
-    subspec.source_files = "Code/AssemblyTesting.h", "Code/AssemblyTesting"
+    subspec.source_files = "Code/Testing/AssemblyTesting.h", "Code/Testing/AssemblyTesting/*.{h,m}"
     subspec.framework = 'XCTest'
   end
 end
