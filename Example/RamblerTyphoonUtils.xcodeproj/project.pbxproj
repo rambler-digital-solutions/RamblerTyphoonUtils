@@ -25,6 +25,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9F6D7FD01BF897D300296EE7 /* RamblerApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D7FCF1BF897D300296EE7 /* RamblerApplicationAssembly.m */; };
 		9F6D7FD21BF899B000296EE7 /* RamblerApplicationAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D7FD11BF899B000296EE7 /* RamblerApplicationAssemblyTests.m */; };
+		9FF64CDE1CD784DA002472FA /* RamblerApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D7FCF1BF897D300296EE7 /* RamblerApplicationAssembly.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				3FF4A292D333D725FA61E7BF /* Copy Pods Resources */,
+				86DEC2A94D6B36FBA8B55797 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +242,7 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				C0E106F2674E98766A0E88C4 /* Copy Pods Resources */,
+				7F2FA9E0D4602D696BC7ADC9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +340,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		7F2FA9E0D4602D696BC7ADC9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblerTyphoonUtils_Tests/Pods-RamblerTyphoonUtils_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86DEC2A94D6B36FBA8B55797 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblerTyphoonUtils_Example/Pods-RamblerTyphoonUtils_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8AC4B1AA7CE1810DB0BA3734 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF64CDE1CD784DA002472FA /* RamblerApplicationAssembly.m in Sources */,
 				9F6D7FD21BF899B000296EE7 /* RamblerApplicationAssemblyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,9 +1,9 @@
 PODS:
-  - RamblerTyphoonUtils (1.0.0):
-    - RamblerTyphoonUtils/AssemblyCollector (= 1.0.0)
-    - RamblerTyphoonUtils/AssemblyTesting (= 1.0.0)
-  - RamblerTyphoonUtils/AssemblyCollector (1.0.0)
-  - RamblerTyphoonUtils/AssemblyTesting (1.0.0)
+  - RamblerTyphoonUtils (1.3.0):
+    - RamblerTyphoonUtils/AssemblyCollector (= 1.3.0)
+    - RamblerTyphoonUtils/AssemblyTesting (= 1.3.0)
+  - RamblerTyphoonUtils/AssemblyCollector (1.3.0)
+  - RamblerTyphoonUtils/AssemblyTesting (1.3.0)
   - Typhoon (3.4.3):
     - Typhoon/no-arc (= 3.4.3)
   - Typhoon/no-arc (3.4.3)
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RamblerTyphoonUtils: bafad8fd42ca7df9239d2ccb68021ba21d81d741
+  RamblerTyphoonUtils: c54d0ad60ead14f5e05b5330f4ec5b81cd8612a9
   Typhoon: 382b918b31d5d19a82922448af65f01f08102dc6
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

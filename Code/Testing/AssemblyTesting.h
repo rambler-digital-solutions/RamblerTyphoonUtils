@@ -9,8 +9,8 @@
 #ifndef _RamblerTyphoonUtils_AssemblyTesting_h_
 #define _RamblerTyphoonUtils_AssemblyTesting_h_
 
-#import "AssemblyTesting/RamblerTyphoonAssemblyTests.h"
-#import "AssemblyTesting/RamblerTyphoonAssemblyTestUtilities.h"
-#import "AssemblyTesting/RamblerTyphoonAssemblyTestsTypeDescriptor.h"
+#import "RamblerTyphoonAssemblyTests.h"
+#import "RamblerTyphoonAssemblyTestUtilities.h"
+#import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"
 
 #endif

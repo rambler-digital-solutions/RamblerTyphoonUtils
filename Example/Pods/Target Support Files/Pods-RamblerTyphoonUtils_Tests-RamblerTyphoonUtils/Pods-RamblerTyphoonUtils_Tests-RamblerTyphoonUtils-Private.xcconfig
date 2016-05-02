@@ -1,7 +1,0 @@
-#include "Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils.xcconfig"
-FRAMEWORK_SEARCH_PATHS = ${PODS_RAMBLERTYPHOONUTILS_TESTS_RAMBLERTYPHOONUTILS_FRAMEWORK_SEARCH_PATHS}
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/RamblerTyphoonUtils" "${PODS_ROOT}/Headers/Private/RamblerTyphoonUtils/AssemblyCollector" "${PODS_ROOT}/Headers/Private/RamblerTyphoonUtils/AssemblyTesting" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/RamblerTyphoonUtils" "${PODS_ROOT}/Headers/Public/RamblerTyphoonUtils/AssemblyCollector" "${PODS_ROOT}/Headers/Public/RamblerTyphoonUtils/AssemblyTesting" "${PODS_ROOT}/Headers/Public/Typhoon"
-OTHER_LDFLAGS = ${PODS_RAMBLERTYPHOONUTILS_TESTS_RAMBLERTYPHOONUTILS_OTHER_LDFLAGS}
-PODS_ROOT = ${SRCROOT}
-SKIP_INSTALL = YES
