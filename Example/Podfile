@@ -6,6 +6,5 @@ target 'RamblerTyphoonUtils_Example', :exclusive => true do
 end
 
 target 'RamblerTyphoonUtils_Tests', :exclusive => true do
-  pod "Typhoon"
   pod "RamblerTyphoonUtils", :path => "../"
 end

@@ -104,6 +104,20 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>03963BF0E3DDCA29016EEDA8989796E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BAB71C69885AB15B90340EF7FCB26CA7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>03CA91998D6773EC5D02B3DB87B8353E</key>
 		<dict>
 			<key>buildSettings</key>
@@ -171,6 +185,13 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>041FA814100B972DD1D27DFD6816AADB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E351727CD07BB90B2A3CAE2C2433F6C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>0488616130F8592F07B4065EF7AEEBF6</key>
 		<dict>
@@ -248,33 +269,6 @@
 		<dict>
 			<key>fileRef</key>
 			<string>4B8BB9A7A5967536EA9E214B11777B3A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>0686FA79F184251B4C8D5C391E93AFAE</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>816673CB9317C2200D6ECD5684667745</string>
-			<key>remoteInfo</key>
-			<string>Typhoon</string>
-		</dict>
-		<key>08504E64AB49BD46316AAAB4CF33AD9D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DCDD19A3CC41B0FA11E261336BEFF4FD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -519,20 +513,6 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>0D65A3AA9BBA2F43E71EB8841CD6E938</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3BD30E1B9EDAD47606608039EE1ACE98</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>0DCD774A260818B6210D62ABF5B845CB</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -562,17 +542,6 @@
 			<string>Source/Definition/AutoInjection/TyphoonFactoryAutoInjectionPostProcessor.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0F7B89033344E4BC6441E75740C900D2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Typhoon</string>
-			<key>target</key>
-			<string>816673CB9317C2200D6ECD5684667745</string>
-			<key>targetProxy</key>
-			<string>0686FA79F184251B4C8D5C391E93AFAE</string>
 		</dict>
 		<key>10603C603F1BD547710C89C7E53C9A31</key>
 		<dict>
@@ -676,26 +645,12 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>12B0B446DC9842AC2278A43823D9BB57</key>
+		<key>12DF68F18DD3A4DB776655358AA0F9A1</key>
 		<dict>
 			<key>fileRef</key>
 			<string>EDFCDC25A5F0A7E099D9ACB3CB9BE9D1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>14742F7E57532EF3E698FCA6A9028CBB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2B6CD93024C424A023A9B9BE8A6DA55B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>149EE4E6F6F44C82A9C0DF32C2FA0009</key>
 		<dict>
@@ -926,6 +881,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>1A1DA71334FBE9B4F2B055DAF9032F02</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E351727CD07BB90B2A3CAE2C2433F6C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>1AA85ACA77E00C2D67D300341333D8CE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1085,13 +1047,6 @@
 			<string>libPods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>1CC5DC414B7AD54E5FD9ADAF9DDB688C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>436E1EAD50AC80B82B067C7713DA07F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>1D06A8E0B5BD0E9767DC72515D871D11</key>
 		<dict>
@@ -1329,6 +1284,38 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>2240E1B83EAC0F760E10F78435EB9EDD</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E5DAE7639DBEF2E3670468EC1014B781</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
 		<key>22B3C721E652B790D6ACCD39A1FD77BF</key>
 		<dict>
 			<key>fileRef</key>
@@ -1440,10 +1427,10 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>285E64AEA2180AEE2117AFBF0B186243</key>
+		<key>2876419B720775EAC143B59CB6FDD64D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BAB71C69885AB15B90340EF7FCB26CA7</string>
+			<string>CD54619C9EA23F16ACE5CAF7FAF8C0C0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1922,6 +1909,32 @@
 				</array>
 			</dict>
 		</dict>
+		<key>39FFE67DC5841BA64D2C4A3939BD9371</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>81FD0F87E8CD8B4D4D5E243E66FCB5F2</string>
+			<key>buildPhases</key>
+			<array>
+				<string>DB4F1368BFD4F5D0921A7EB087DDB637</string>
+				<string>D166D8E21F1D168A0DF9019F9CF251D8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>FAA856C4F58DC4C80F776052257357FC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-RamblerTyphoonUtils_Tests</string>
+			<key>productName</key>
+			<string>Pods-RamblerTyphoonUtils_Tests</string>
+			<key>productReference</key>
+			<string>6F066577C92C75BA0822F6B1BEBE7336</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
 		<key>3A3D61FFBA85540F0B315C35515B8517</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2056,6 +2069,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>3E8930F5BC3867BC448335C1EA11B63E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>436E1EAD50AC80B82B067C7713DA07F4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>3EDE79F0DC8B9FC3181D0C68F2F9EDE4</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2070,27 +2090,6 @@
 			<string>Source/Definition/Injections/TyphoonParameterInjection.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3F0492E31ADF1DF77FB17E5A88AEDB94</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>535492B4619A652FE7C6C2557FFD5712</string>
-				<string>831701E147F1F48358DF790220D41E09</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3F0E601DB204120ACE7D86E7EBC81952</key>
-		<dict>
-			<key>fileRef</key>
-			<string>882543C721113483E2BCFA4DDF226553</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>3F40CE87D0AF68CBD8B7E51C5B175EA1</key>
 		<dict>
@@ -2370,6 +2369,13 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>49AF5A22A6E0A0C9D28FCB9BB5052B44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>279AA6492631DEFA8C439A9C088EEB8A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>49B847C12DDD27A48554CC8F4CC175BD</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2443,27 +2449,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4BB1A754777AF860C4478D458949C31A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CD54619C9EA23F16ACE5CAF7FAF8C0C0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4BB1C8496D773B353ED53070FF660B35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>279AA6492631DEFA8C439A9C088EEB8A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>4CB996F8F9E017D7645CCD84A6FFAA63</key>
 		<dict>
 			<key>children</key>
@@ -2530,6 +2515,25 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>4DEE37209CD9D54810747DE53B7E0F4F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EEA7D3E44F38EA67FF575BDE8EDD722F</string>
+				<string>D1BD76BDD22698C8B51D7A1305184349</string>
+				<string>9477D6754ACDF21CD86D0CDC87EA0C5D</string>
+				<string>A249DC519795C2AC3296C5A90A9E8516</string>
+				<string>5631263CAA701E4E54C1C38A13F461DE</string>
+				<string>2876419B720775EAC143B59CB6FDD64D</string>
+				<string>03963BF0E3DDCA29016EEDA8989796E5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>4DFE3876E19B505EE9CC597E010D2906</key>
 		<dict>
@@ -2830,40 +2834,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>535492B4619A652FE7C6C2557FFD5712</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>50A5F26E14A94CC9FE131B10266ED78C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
 		<key>53580A6E4F8C71BBEEFE47918A7B5E39</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2934,13 +2904,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>54AFFF321E710D925CACA15DDD55ECFF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ADBD7E0CE54580CDE2818E4327F7B5F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>5592092E762A5244BA547686294C74AF</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -2955,6 +2918,20 @@
 			<string>Source/Factory/Internal/TyphoonBlockComponentFactory.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5631263CAA701E4E54C1C38A13F461DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E41B730255AE06F5070F9C0111709B35</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>5652ADD3AAE96BB3D16160DF12655846</key>
 		<dict>
@@ -2987,19 +2964,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>5913E1029DB97334DA4DD1B2D60E5E27</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>EDFC9E50AFFB8E4F028E64AA6D88C045</string>
-			<key>remoteInfo</key>
-			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
-		</dict>
 		<key>59887160D8F30049C54E85E744ED0B0E</key>
 		<dict>
 			<key>fileRef</key>
@@ -3011,38 +2975,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
-		</dict>
-		<key>59E8123806A210F17EE8BA4F7FBB6CDD</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E5DAE7639DBEF2E3670468EC1014B781</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
 		</dict>
 		<key>5B8D35164E3BC64A54E88ED902C84AA7</key>
 		<dict>
@@ -3519,6 +3451,40 @@
 			<string>Source/Factory/Internal/NSMethodSignature+TCFUnwrapValues.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>70C105E7AEB5C879B465C43163D50AF0</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>50A5F26E14A94CC9FE131B10266ED78C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
 		</dict>
 		<key>711398521EEB76934D0ADE590F404AD1</key>
 		<dict>
@@ -4136,6 +4102,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>81FD0F87E8CD8B4D4D5E243E66FCB5F2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9443A7F8CDE7B7477003AD4AF235B42D</string>
+				<string>2240E1B83EAC0F760E10F78435EB9EDD</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
 		<key>825B88848A7723D6AB31937AE150E76F</key>
 		<dict>
 			<key>fileRef</key>
@@ -4149,40 +4129,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>831701E147F1F48358DF790220D41E09</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>50A5F26E14A94CC9FE131B10266ED78C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
 		</dict>
 		<key>838697483FAF71A5FAD1B2988AC167C0</key>
 		<dict>
@@ -4239,13 +4185,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>8500DDD84B1F246584964B5221E12DD6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E351727CD07BB90B2A3CAE2C2433F6C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>854C008CC69BE5832C5607F511F55897</key>
 		<dict>
@@ -4405,6 +4344,23 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>8C5ADCD3894BDC9AADF86A9712D16999</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AE03EE506AFEDC0E0BCA65C2E7031130</string>
+				<string>E827A018E1C621F92353A13B49250358</string>
+				<string>12DF68F18DD3A4DB776655358AA0F9A1</string>
+				<string>E7A5ABA03F2FAEC4298A5162C3752806</string>
+				<string>3E8930F5BC3867BC448335C1EA11B63E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>8CE34D617C9C07818BB67796CC4C7C24</key>
 		<dict>
@@ -4662,18 +4618,51 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9480C85105FA69C8D8D7AB3EEEA1F297</key>
+		<key>9443A7F8CDE7B7477003AD4AF235B42D</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8500DDD84B1F246584964B5221E12DD6</string>
-			</array>
+			<key>baseConfigurationReference</key>
+			<string>48A15410D9C838C25131521EF3EC34DA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9477D6754ACDF21CD86D0CDC87EA0C5D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>75EA7A4245F7CF882E0235CDC5012892</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>94DF2211139D50292F31B86F6059F1B0</key>
 		<dict>
@@ -4739,17 +4728,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
-		</dict>
-		<key>96C7625943BFA43AED30C57A110D797C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
-			<key>target</key>
-			<string>EDFC9E50AFFB8E4F028E64AA6D88C045</string>
-			<key>targetProxy</key>
-			<string>5913E1029DB97334DA4DD1B2D60E5E27</string>
 		</dict>
 		<key>979B86136896014D143DC05CBD5CD892</key>
 		<dict>
@@ -4918,6 +4896,13 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>9F1FAC726E50F3A791DAF47B15F20412</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D39DB9516A796728FB5B09EE0EA90C6F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>9F2B45B58F2A99E6C49FDB73D30999AD</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5069,6 +5054,20 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>A249DC519795C2AC3296C5A90A9E8516</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3BD30E1B9EDAD47606608039EE1ACE98</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>A2D78FCC8468E835214C84778E804446</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5126,20 +5125,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A42175933198E01BD0B4C1319F9FB1CD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DD8A50346F11E86A50299F2199F489F3</string>
-				<string>4BB1C8496D773B353ED53070FF660B35</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>A4D4E6CEA48902BBB41F1F14B68F9005</key>
 		<dict>
 			<key>fileRef</key>
@@ -5166,6 +5151,31 @@
 			<string>Source/Definition/Injections/TyphoonInjectionByType.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5515FFCEE96C22B89844066C24EBCAE</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F5140F0CA5573452D3DF256306FD181A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>8C5ADCD3894BDC9AADF86A9712D16999</string>
+				<string>CFAA1FE76BC55527C3B83EB16D66155C</string>
+				<string>4DEE37209CD9D54810747DE53B7E0F4F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
+			<key>productName</key>
+			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
+			<key>productReference</key>
+			<string>1C7146E13B0FB1F070B0C2EBE47BBA90</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>A5708D5E747CB2DE0B84FD7E3E27B5A9</key>
 		<dict>
@@ -5263,38 +5273,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A7E7B33622156083808BDDED64A660C2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>48A15410D9C838C25131521EF3EC34DA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
 		<key>A84DE6EEE9708B4C843AA62A86F36315</key>
 		<dict>
 			<key>fileRef</key>
@@ -5317,20 +5295,6 @@
 			<dict>
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>AA634D49761FE4466C7955CEDC73C6F5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>75EA7A4245F7CF882E0235CDC5012892</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
 			</dict>
 		</dict>
 		<key>AB1F9FBDE442D757975205FD3EE477E0</key>
@@ -5388,6 +5352,40 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>AB9B65D36FF854B89A81CA320173B2AF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>50A5F26E14A94CC9FE131B10266ED78C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils/Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
 		</dict>
 		<key>ABC48DBB257C2BEF55D562608ED944E6</key>
 		<dict>
@@ -5496,6 +5494,13 @@
 			<string>RamblerInitialAssemblyCollector.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AE03EE506AFEDC0E0BCA65C2E7031130</key>
+		<dict>
+			<key>fileRef</key>
+			<string>75F11222C061000589F94E0411EB1C0B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>AEB0C40C89E5D406D651B0D0F484B536</key>
 		<dict>
@@ -5662,19 +5667,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>B2F1A44A57B442CAD16A2C87A051AC87</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D9D6B9BEF5B23E5366B450B0047B6E35</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>B377815EDF0A763201B97BDFE04625C4</key>
 		<dict>
@@ -6096,20 +6088,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BE1436181B93D653775AEC2FDD21C795</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E41B730255AE06F5070F9C0111709B35</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
 		<key>BE44AF15ADD7E09C0BF58615C416D8E4</key>
 		<dict>
 			<key>fileRef</key>
@@ -6301,33 +6279,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>C93139A49ABEB05BEEE8982B8781B3C7</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F2D2DB0AD436F9BE4E2A05DCEC72DB4B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B2F1A44A57B442CAD16A2C87A051AC87</string>
-				<string>9480C85105FA69C8D8D7AB3EEEA1F297</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>96C7625943BFA43AED30C57A110D797C</string>
-				<string>0F7B89033344E4BC6441E75740C900D2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-RamblerTyphoonUtils_Tests</string>
-			<key>productName</key>
-			<string>Pods-RamblerTyphoonUtils_Tests</string>
-			<key>productReference</key>
-			<string>6F066577C92C75BA0822F6B1BEBE7336</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
 		<key>CA98CF6392177D0D123615F6B6D3AA7B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -6468,23 +6419,6 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>CE6037CECF4DE0BCADCDA51653855442</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FC59A3B714463E8FE2789791E77D1D9F</string>
-				<string>54AFFF321E710D925CACA15DDD55ECFF</string>
-				<string>12B0B446DC9842AC2278A43823D9BB57</string>
-				<string>3F0E601DB204120ACE7D86E7EBC81952</string>
-				<string>1CC5DC414B7AD54E5FD9ADAF9DDB688C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
 		<key>CE8007F0E60419ED1C9B7C703C723C27</key>
 		<dict>
 			<key>fileRef</key>
@@ -6526,6 +6460,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>CFAA1FE76BC55527C3B83EB16D66155C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>041FA814100B972DD1D27DFD6816AADB</string>
+				<string>49AF5A22A6E0A0C9D28FCB9BB5052B44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>D0513EE7556F9F20AAD962820FAD90A7</key>
 		<dict>
 			<key>fileRef</key>
@@ -6552,6 +6500,19 @@
 			<string>Source/ios/TyphooniOS.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D166D8E21F1D168A0DF9019F9CF251D8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1A1DA71334FBE9B4F2B055DAF9032F02</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>D1864BEAF8A45FE28369EEABB5026511</key>
 		<dict>
@@ -6582,6 +6543,20 @@
 			<string>Source/Factory/Internal/TyphoonRuntimeArguments.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1BD76BDD22698C8B51D7A1305184349</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2B6CD93024C424A023A9B9BE8A6DA55B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>D203540E26F082752F3371FABB292C6A</key>
 		<dict>
@@ -6727,8 +6702,8 @@
 			<array>
 				<string>E1106EA94AC6E4D7288CE7FC952F7E0F</string>
 				<string>4EE1453AFDDFB9D6DAC05C3EEF0062D0</string>
-				<string>C93139A49ABEB05BEEE8982B8781B3C7</string>
-				<string>EDFC9E50AFFB8E4F028E64AA6D88C045</string>
+				<string>39FFE67DC5841BA64D2C4A3939BD9371</string>
+				<string>A5515FFCEE96C22B89844066C24EBCAE</string>
 				<string>816673CB9317C2200D6ECD5684667745</string>
 			</array>
 		</dict>
@@ -6818,13 +6793,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D9D6B9BEF5B23E5366B450B0047B6E35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D39DB9516A796728FB5B09EE0EA90C6F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>DABE9DE0A3B7B5A25D6BCCC824898825</key>
 		<dict>
 			<key>fileRef</key>
@@ -6836,6 +6804,19 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
+		</dict>
+		<key>DB4F1368BFD4F5D0921A7EB087DDB637</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9F1FAC726E50F3A791DAF47B15F20412</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>DB874474EB7E80ACC45FD870F0ED9BED</key>
 		<dict>
@@ -6929,13 +6910,6 @@
 			<string>Source/Definition/Internal/TyphoonFactoryDefinition.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD8A50346F11E86A50299F2199F489F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E351727CD07BB90B2A3CAE2C2433F6C5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>DE132435EB1D6C890AFD6BA5D60DBCDF</key>
 		<dict>
@@ -7140,6 +7114,19 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
+		<key>E3F90C7E027FC4E2C9CFF8B99F7A6FF8</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>A5515FFCEE96C22B89844066C24EBCAE</string>
+			<key>remoteInfo</key>
+			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
+		</dict>
 		<key>E41B730255AE06F5070F9C0111709B35</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -7262,6 +7249,13 @@
 				</array>
 			</dict>
 		</dict>
+		<key>E7A5ABA03F2FAEC4298A5162C3752806</key>
+		<dict>
+			<key>fileRef</key>
+			<string>882543C721113483E2BCFA4DDF226553</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>E7EE62059F5E147AF1FEC69B08A61C8F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -7291,6 +7285,13 @@
 			<string>Source/Factory/Assembly/TyphoonAssembly+TyphoonAssemblyFriend.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E827A018E1C621F92353A13B49250358</key>
+		<dict>
+			<key>fileRef</key>
+			<string>ADBD7E0CE54580CDE2818E4327F7B5F4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>E85FC1BF079D6FD6D89D0638B4E7A779</key>
 		<dict>
@@ -7697,31 +7698,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EDFC9E50AFFB8E4F028E64AA6D88C045</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3F0492E31ADF1DF77FB17E5A88AEDB94</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CE6037CECF4DE0BCADCDA51653855442</string>
-				<string>A42175933198E01BD0B4C1319F9FB1CD</string>
-				<string>EFC5915FD10F24DD5EAA6AB633FB36E8</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
-			<key>productName</key>
-			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
-			<key>productReference</key>
-			<string>1C7146E13B0FB1F070B0C2EBE47BBA90</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
 		<key>EDFCDC25A5F0A7E099D9ACB3CB9BE9D1</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -7734,6 +7710,20 @@
 			<string>RamblerTyphoonAssemblyTests.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EEA7D3E44F38EA67FF575BDE8EDD722F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DCDD19A3CC41B0FA11E261336BEFF4FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>EEE016CC408BC86BEC3269E25A3E0202</key>
 		<dict>
@@ -7792,25 +7782,6 @@
 			<string>Source/Factory/Internal/TyphoonAssemblyBuilder.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EFC5915FD10F24DD5EAA6AB633FB36E8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>08504E64AB49BD46316AAAB4CF33AD9D</string>
-				<string>14742F7E57532EF3E698FCA6A9028CBB</string>
-				<string>AA634D49761FE4466C7955CEDC73C6F5</string>
-				<string>0D65A3AA9BBA2F43E71EB8841CD6E938</string>
-				<string>BE1436181B93D653775AEC2FDD21C795</string>
-				<string>4BB1A754777AF860C4478D458949C31A</string>
-				<string>285E64AEA2180AEE2117AFBF0B186243</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>EFE516CF20244AA1DFAFB10469BCC9D5</key>
 		<dict>
@@ -7957,20 +7928,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F2D2DB0AD436F9BE4E2A05DCEC72DB4B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>A7E7B33622156083808BDDED64A660C2</string>
-				<string>59E8123806A210F17EE8BA4F7FBB6CDD</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
 		<key>F308D58E8015542126C4E663EB746CAE</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -8027,6 +7984,20 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>F5140F0CA5573452D3DF256306FD181A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>70C105E7AEB5C879B465C43163D50AF0</string>
+				<string>AB9B65D36FF854B89A81CA320173B2AF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>F5699D5EA6BFC3AE3159BAC373B14AFB</key>
 		<dict>
@@ -8120,6 +8091,17 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>FAA856C4F58DC4C80F776052257357FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-RamblerTyphoonUtils_Tests-RamblerTyphoonUtils</string>
+			<key>target</key>
+			<string>A5515FFCEE96C22B89844066C24EBCAE</string>
+			<key>targetProxy</key>
+			<string>E3F90C7E027FC4E2C9CFF8B99F7A6FF8</string>
+		</dict>
 		<key>FAC9B59F4D9A4AABF81E32C71E368FB8</key>
 		<dict>
 			<key>fileRef</key>
@@ -8159,13 +8141,6 @@
 			<string>Source/Definition/AutoInjection/TyphoonFactoryAutoInjectionPostProcessor.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FC59A3B714463E8FE2789791E77D1D9F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>75F11222C061000589F94E0411EB1C0B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>FCDB2210C683788D74585488F32F6B1F</key>
 		<dict>
