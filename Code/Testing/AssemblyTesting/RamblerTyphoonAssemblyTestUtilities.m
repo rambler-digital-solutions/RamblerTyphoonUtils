@@ -10,17 +10,14 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-#import <Typhoon/TyphoonIntrospectionUtils.h>
-#import <Typhoon/TyphoonTypeDescriptor.h>
-
 @implementation RamblerTyphoonAssemblyTestUtilities
 
 #pragma mark - Public
 
 + (NSDictionary *)propertiesForHierarchyOfClass:(Class)objectClass {
     NSMutableDictionary *properties = [NSMutableDictionary new];
-    NSSet *propertyNames = [TyphoonIntrospectionUtils propertiesForClass:objectClass
-                                                         upToParentClass:[NSObject class]];
+    NSSet *propertyNames = [self propertiesForClass:objectClass
+                                    upToParentClass:[NSObject class]];
     
     for (NSString *propertyName in propertyNames) {
         NSString *propertyType = [self obtainTypeForProperty:propertyName inClass:objectClass];
@@ -31,6 +28,30 @@
 }
 
 #pragma mark - Helpers
+
++ (NSSet *)propertiesForClass:(Class)clazz upToParentClass:(Class)parent
+{
+    NSMutableSet *propertyNames = [[NSMutableSet alloc] init];
+    
+    while (clazz && clazz != parent) {
+        unsigned int count = 0;
+        objc_property_t *properties = class_copyPropertyList(clazz, &count);
+        
+        for (unsigned int propertyIndex = 0; propertyIndex < count; propertyIndex++) {
+            objc_property_t aProperty = properties[propertyIndex];
+            NSString *propertyName = [NSString stringWithCString:property_getName(aProperty)
+                                                        encoding:NSUTF8StringEncoding];
+            
+            [propertyNames addObject:propertyName];
+        }
+        
+        clazz = class_getSuperclass(clazz);
+        
+        free(properties);
+    }
+    
+    return propertyNames;
+}
 
 + (NSString *)obtainTypeForProperty:(NSString *)propertyName inClass:(Class)class {
     objc_property_t propertyReflection = class_getProperty(class, [propertyName cStringUsingEncoding:NSASCIIStringEncoding]);
