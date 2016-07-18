@@ -25,6 +25,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9F6D7FD01BF897D300296EE7 /* RamblerApplicationAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D7FCF1BF897D300296EE7 /* RamblerApplicationAssembly.m */; };
 		9F6D7FD21BF899B000296EE7 /* RamblerApplicationAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D7FD11BF899B000296EE7 /* RamblerApplicationAssemblyTests.m */; };
+		9FE35D391D3D0DA8007CB73E /* RamblerAssemblyBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE35D381D3D0DA8007CB73E /* RamblerAssemblyBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		9F6D7FD11BF899B000296EE7 /* RamblerApplicationAssemblyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RamblerApplicationAssemblyTests.m; sourceTree = "<group>"; };
 		9F6D7FD31BF899BA00296EE7 /* RamblerApplicationAssembly_Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerApplicationAssembly_Testable.h; sourceTree = "<group>"; };
 		9FDB81A44B0D265A7FDA7CA5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9FE35D371D3D0DA8007CB73E /* RamblerAssemblyBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RamblerAssemblyBase.h; sourceTree = "<group>"; };
+		9FE35D381D3D0DA8007CB73E /* RamblerAssemblyBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RamblerAssemblyBase.m; sourceTree = "<group>"; };
 		AFBDDCACE0FE789A71964932 /* RamblerTyphoonUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RamblerTyphoonUtils.podspec; path = ../RamblerTyphoonUtils.podspec; sourceTree = "<group>"; };
 		B04C7904FE5124F30AD3E192 /* Pods-RamblerTyphoonUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblerTyphoonUtils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RamblerTyphoonUtils_Example/Pods-RamblerTyphoonUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +155,8 @@
 				6003F5A6195388D20070C39A /* RamblerViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				9FE35D371D3D0DA8007CB73E /* RamblerAssemblyBase.h */,
+				9FE35D381D3D0DA8007CB73E /* RamblerAssemblyBase.m */,
 			);
 			name = "Example for RamblerTyphoonUtils";
 			path = RamblerTyphoonUtils;
@@ -406,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE35D391D3D0DA8007CB73E /* RamblerAssemblyBase.m in Sources */,
 				01237C4A1C4327E400FCC84C /* RamblerBarFooObject.m in Sources */,
 				9F6D7FD01BF897D300296EE7 /* RamblerApplicationAssembly.m in Sources */,
 				6003F59E195388D20070C39A /* RamblerAppDelegate.m in Sources */,

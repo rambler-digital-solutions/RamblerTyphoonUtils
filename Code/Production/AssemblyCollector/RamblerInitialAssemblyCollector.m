@@ -23,7 +23,7 @@
         numClasses = objc_getClassList(classes, numClasses);
         for (int i = 0; i < numClasses; i++) {
             Class nextClass = classes[i];
-            if (class_conformsToProtocol(nextClass, @protocol(RamblerInitialAssembly))) {
+            if ([self checkIfClassIsInitialAssembly:nextClass]) {
                 [resultClasses addObject:nextClass];
             }
         }
@@ -42,6 +42,18 @@
         }
     }
     return [initialAssemblies copy];
+}
+
+- (BOOL)checkIfClassIsInitialAssembly:(Class)assemblyClass {
+    if (assemblyClass == nil) {
+        return NO;
+    }
+    
+    if (class_conformsToProtocol(assemblyClass, @protocol(RamblerInitialAssembly))) {
+        return YES;
+    } else {
+        return [self checkIfClassIsInitialAssembly:class_getSuperclass(assemblyClass)];
+    }
 }
 
 @end

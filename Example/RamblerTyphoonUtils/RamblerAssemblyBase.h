@@ -7,7 +7,8 @@
 //
 
 #import <Typhoon/Typhoon.h>
+#import <RamblerTyphoonUtils/AssemblyCollector.h>
 
-@interface RamblerAssemblyBase : TyphoonAssembly
+@interface RamblerAssemblyBase : TyphoonAssembly <RamblerInitialAssembly>
 
 @end
