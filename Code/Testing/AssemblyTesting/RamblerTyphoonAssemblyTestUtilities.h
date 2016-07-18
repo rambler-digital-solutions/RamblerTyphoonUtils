@@ -24,13 +24,4 @@
  */
 + (NSDictionary *)propertiesForHierarchyOfClass:(Class)objectClass;
 
-/**
- Returns all of the target class properties, not-including base classes properties.
-
- @param objectClass The target class
-
- @return NSDictionary
- */
-+ (NSDictionary *)propertiesOfClass:(Class)objectClass;
-
 @end

@@ -10,84 +10,63 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+#import <Typhoon/TyphoonIntrospectionUtils.h>
+#import <Typhoon/TyphoonTypeDescriptor.h>
+
 @implementation RamblerTyphoonAssemblyTestUtilities
 
 #pragma mark - Public
 
 + (NSDictionary *)propertiesForHierarchyOfClass:(Class)objectClass {
-    NSMutableDictionary *properties = [NSMutableDictionary dictionary];
-    [self propertiesForHierarchyOfClass:objectClass
-                           onDictionary:properties];
-    return [NSDictionary dictionaryWithDictionary:properties];
-}
-
-+ (NSDictionary *)propertiesOfClass:(Class)objectClass {
-    NSMutableDictionary *properties = [NSMutableDictionary dictionary];
-    return [self propertiesForSubclass:objectClass
-                          onDictionary:properties];
+    NSMutableDictionary *properties = [NSMutableDictionary new];
+    NSSet *propertyNames = [TyphoonIntrospectionUtils propertiesForClass:objectClass
+                                                         upToParentClass:[NSObject class]];
+    
+    for (NSString *propertyName in propertyNames) {
+        NSString *propertyType = [self obtainTypeForProperty:propertyName inClass:objectClass];
+        properties[propertyName] = propertyType;
+    }
+    
+    return [properties copy];
 }
 
 #pragma mark - Helpers
 
-+ (NSMutableDictionary *)propertiesForHierarchyOfClass:(Class)class
-                                          onDictionary:(NSMutableDictionary *)properties {
-    if (class == [NSObject class]) {
-        return properties;
-    }
-
-    [self propertiesForSubclass:class
-                   onDictionary:properties];
-
-    return [self propertiesForHierarchyOfClass:[class superclass]
-                                  onDictionary:properties];
-}
-
-+ (NSMutableDictionary *)propertiesForSubclass:(Class)class
-                                  onDictionary:(NSMutableDictionary *)properties {
-    unsigned int outCount, i;
-    objc_property_t *objcProperties = class_copyPropertyList(class, &outCount);
-    for (i = 0; i < outCount; i++) {
-        objc_property_t property = objcProperties[i];
-        const char *propName = property_getName(property);
-        if(propName) {
-            const char *propType = getPropertyType(property);
-            NSString *propertyName = [NSString stringWithUTF8String:propName];
-            NSString *propertyType = [NSString stringWithUTF8String:propType];
-            [properties setObject:propertyType forKey:propertyName];
++ (NSString *)obtainTypeForProperty:(NSString *)propertyName inClass:(Class)class {
+    objc_property_t propertyReflection = class_getProperty(class, [propertyName cStringUsingEncoding:NSASCIIStringEncoding]);
+    NSString *typeName = @"";
+    if (propertyReflection) {
+        const char *attributes = property_getAttributes(propertyReflection);
+        
+        if (attributes == NULL) {
+            return (NULL);
         }
-    }
-    free(objcProperties);
-    
-    return properties;
-}
-
-static const char *getPropertyType(objc_property_t property) {
-    const char *attributes = property_getAttributes(property);
-    char buffer[1 + strlen(attributes)];
-    strcpy(buffer, attributes);
-    char *state = buffer, *attribute;
-    while ((attribute = strsep(&state, ",")) != NULL) {
-        if (attribute[0] == 'T' && attribute[1] != '@') {
-            // Primitive types
-            return "";
+        
+        static char buffer[256];
+        const char *e = strchr(attributes, ',');
+        if (e == NULL) {
+            return (NULL);
         }
-        else if (attribute[0] == 'T' && attribute[1] == '@' && strlen(attribute) == 2) {
-            // id type
-            return "id";
-        }
-        else if (attribute[0] == 'T' && attribute[1] == '@') {
-            NSString *name;
-            if (attribute[2] == '?') {
-                // Blocks
-                name = [[NSString alloc] initWithBytes:attribute + 2 length:1 encoding:NSASCIIStringEncoding];
-            } else {
-                // Other classes
-                name = [[NSString alloc] initWithBytes:attribute + 3 length:strlen(attribute) - 4 encoding:NSASCIIStringEncoding];
+        
+        NSUInteger len = (NSUInteger) (e - attributes);
+        memcpy( buffer, attributes, len );
+        buffer[len] = '\0';
+        
+        NSString *typeCode = [NSString stringWithCString:buffer encoding:NSASCIIStringEncoding];
+        if ([typeCode hasPrefix:@"T@"]) {
+            NSRange typeNameRange = NSMakeRange(2, typeCode.length - 2);
+            NSRange quoteRange = [typeCode rangeOfString:@"\"" options:0 range:typeNameRange locale:nil];
+            if (quoteRange.length > 0) {
+                typeNameRange.location = quoteRange.location + 1;
+                typeNameRange.length = typeCode.length - typeNameRange.location;
+                
+                NSRange range = [typeCode rangeOfString:@"\"" options:0 range:typeNameRange locale:nil];
+                typeNameRange.length = range.location - typeNameRange.location;
             }
-            return (const char *)[name cStringUsingEncoding:NSASCIIStringEncoding];
+            typeName = [typeCode substringWithRange:typeNameRange];
         }
     }
-    return "";
+    return typeName;
 }
 
 @end
