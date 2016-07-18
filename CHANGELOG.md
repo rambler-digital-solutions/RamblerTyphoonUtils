@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/rambler-ios/RamblerTyphoonUtils/tree/HEAD)
-
-[Full Changelog](https://github.com/rambler-ios/RamblerTyphoonUtils/compare/1.4.0...HEAD)
+## [1.4.0](https://github.com/rambler-ios/RamblerTyphoonUtils/tree/1.4.0) (2016-07-18)
+[Full Changelog](https://github.com/rambler-ios/RamblerTyphoonUtils/compare/1.3.1...1.4.0)
 
 **Implemented enhancements:**
 
@@ -11,12 +10,6 @@
 **Fixed bugs:**
 
 - Security problems [\#16](https://github.com/rambler-ios/RamblerTyphoonUtils/issues/16)
-
-## [1.4.0](https://github.com/rambler-ios/RamblerTyphoonUtils/tree/1.4.0) (2016-07-18)
-[Full Changelog](https://github.com/rambler-ios/RamblerTyphoonUtils/compare/1.3.1...1.4.0)
-
-**Fixed bugs:**
-
 - Pod issue [\#9](https://github.com/rambler-ios/RamblerTyphoonUtils/issues/9)
 
 ## [1.3.1](https://github.com/rambler-ios/RamblerTyphoonUtils/tree/1.3.1) (2016-05-02)
