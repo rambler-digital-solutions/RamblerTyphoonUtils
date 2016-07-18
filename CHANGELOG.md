@@ -2,7 +2,18 @@
 
 ## [Unreleased](https://github.com/rambler-ios/RamblerTyphoonUtils/tree/HEAD)
 
-[Full Changelog](https://github.com/rambler-ios/RamblerTyphoonUtils/compare/1.3.1...HEAD)
+[Full Changelog](https://github.com/rambler-ios/RamblerTyphoonUtils/compare/1.4.0...HEAD)
+
+**Implemented enhancements:**
+
+- RamblerInitialAssemblyCollector class\_conformsToProtocol ? [\#14](https://github.com/rambler-ios/RamblerTyphoonUtils/issues/14)
+
+**Fixed bugs:**
+
+- Security problems [\#16](https://github.com/rambler-ios/RamblerTyphoonUtils/issues/16)
+
+## [1.4.0](https://github.com/rambler-ios/RamblerTyphoonUtils/tree/1.4.0) (2016-07-18)
+[Full Changelog](https://github.com/rambler-ios/RamblerTyphoonUtils/compare/1.3.1...1.4.0)
 
 **Fixed bugs:**
 
