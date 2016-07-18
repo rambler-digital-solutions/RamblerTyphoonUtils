@@ -2,6 +2,8 @@
 
 ![CocoaPods](https://cocoapod-badges.herokuapp.com/v/RamblerTyphoonUtils/badge.png)
 
+![Typhoon](http://i.imgur.com/MEHAMQX.jpg)
+
 [Typhoon](https://github.com/appsquickly/Typhoon) is a great tool, and iOS team in Rambler&Co loves it a lot. Besides actual contributing, we've developed some useful tools which cannot be included in the main project.
 
 1. `RamblerInitialAssemblyCollector` - this class can be used for activating assemblies on startup instead of plist integration.
