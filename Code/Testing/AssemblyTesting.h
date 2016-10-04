@@ -12,5 +12,6 @@
 #import "RamblerTyphoonAssemblyTests.h"
 #import "RamblerTyphoonAssemblyTestUtilities.h"
 #import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"
+#import "TyphoonAssembly+CustomActivation.h"
 
 #endif
