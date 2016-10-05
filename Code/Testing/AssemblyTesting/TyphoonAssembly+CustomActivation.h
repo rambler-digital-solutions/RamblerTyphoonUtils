@@ -16,6 +16,6 @@
 /**
  Method activate assembly with all initial assemblies as collaborating
  */
-- (instancetype)activateWithAllCollaboratingAssemblies;
+- (instancetype)rds_activateWithAllCollaboratingAssemblies;
 
 @end

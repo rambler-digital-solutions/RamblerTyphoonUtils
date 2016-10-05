@@ -10,7 +10,7 @@
 
 @implementation TyphoonAssembly(CustomActivation)
 
-- (instancetype)activateWithAllCollaboratingAssemblies {
+- (instancetype)rds_activateWithAllCollaboratingAssemblies {
     RamblerInitialAssemblyCollector *collector = [RamblerInitialAssemblyCollector new];
     NSArray *collaboratingAssemblies = [collector collectInitialAssembliesExceptOne:self];
 
