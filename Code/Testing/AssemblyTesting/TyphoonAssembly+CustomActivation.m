@@ -6,6 +6,8 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
+#if __has_include(<Typhoon/Typhoon.h>)
+
 #import "TyphoonAssembly+CustomActivation.h"
 
 @implementation TyphoonAssembly(CustomActivation)
@@ -18,3 +20,5 @@
 }
 
 @end
+
+#endif

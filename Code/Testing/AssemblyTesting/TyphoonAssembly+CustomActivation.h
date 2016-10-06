@@ -6,6 +6,8 @@
 //  Copyright © 2016 Rambler&Co. All rights reserved.
 //
 
+#if __has_include(<Typhoon/Typhoon.h>)
+
 #import <Typhoon/Typhoon.h>
 
 /** 
@@ -19,3 +21,5 @@
 - (instancetype)rds_activateWithAllCollaboratingAssemblies;
 
 @end
+
+#endif
