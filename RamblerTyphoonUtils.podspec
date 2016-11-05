@@ -28,5 +28,6 @@ Pod::Spec.new do |s|
     subspec.source_files = "Code/Testing/AssemblyTesting.h", "Code/Testing/AssemblyTesting/*.{h,m}"
     subspec.framework = 'XCTest'
     subspec.user_target_xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PLATFORM_DIR)/Developer/Library/Frameworks' }
+    subspec.dependency 'OCMock', '~> 3'
   end  
 end
