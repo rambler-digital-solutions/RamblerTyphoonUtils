@@ -1,14 +1,17 @@
 PODS:
-  - RamblerTyphoonUtils (1.3.1):
-    - RamblerTyphoonUtils/AssemblyCollector (= 1.3.1)
-    - RamblerTyphoonUtils/AssemblyTesting (= 1.3.1)
-  - RamblerTyphoonUtils/AssemblyCollector (1.3.1)
-  - RamblerTyphoonUtils/AssemblyTesting (1.3.1)
-  - Typhoon (3.4.3):
-    - Typhoon/no-arc (= 3.4.3)
-  - Typhoon/no-arc (3.4.3)
+  - OCMock (3.3.1)
+  - RamblerTyphoonUtils (1.4.0):
+    - RamblerTyphoonUtils/AssemblyCollector (= 1.4.0)
+    - RamblerTyphoonUtils/AssemblyTesting (= 1.4.0)
+  - RamblerTyphoonUtils/AssemblyCollector (1.4.0)
+  - RamblerTyphoonUtils/AssemblyTesting (1.4.0):
+    - OCMock (~> 3)
+  - Typhoon (3.5.1):
+    - Typhoon/no-arc (= 3.5.1)
+  - Typhoon/no-arc (3.5.1)
 
 DEPENDENCIES:
+  - OCMock
   - RamblerTyphoonUtils (from `../`)
   - RamblerTyphoonUtils/AssemblyCollector (from `../`)
   - Typhoon
@@ -18,7 +21,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RamblerTyphoonUtils: 7c4c7a7e6fa569a38512a687f676a834de2bd311
-  Typhoon: 382b918b31d5d19a82922448af65f01f08102dc6
+  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
+  RamblerTyphoonUtils: a6d8e77d7a2f1866ba96959eac338ddccafcadf0
+  Typhoon: c0950bb9f2e835eb8a7dc6983160109b6baf2dda
 
 COCOAPODS: 0.39.0

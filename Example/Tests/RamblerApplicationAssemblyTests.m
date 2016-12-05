@@ -8,10 +8,12 @@
 
 #import <XCTest/XCTest.h>
 #import <RamblerTyphoonUtils/AssemblyTesting.h>
+#import "OCMock.h"
 
 #import "RamblerApplicationAssembly_Testable.h"
 
 #import "RamblerAppDelegate.h"
+#import "RamblerBarProtocol.h"
 
 @interface RamblerApplicationAssemblyTests : RamblerTyphoonAssemblyTests
 
@@ -60,6 +62,21 @@
     [self verifyTargetDependency:result
                   withDescriptor:resultTypeDescriptor
                     dependencies:dependencies];
+}
+
+- (void)testThatAssemblyCreatesAppDelegateWithDependenciesVersion2 {
+    // given
+    RamblerPrepareAssemblyTestClass([RamblerAppDelegate class]);
+    
+    // when
+    id result = [self.assembly appDelegate];
+    
+    // then
+    RamblerVerifySetter(result, injectedString);
+    RamblerVerifySetter(result, injectedPropertyWithProtocols);
+    OCMVerify([result setInjectedString:ROCMConfirmToClass([NSString class])]);
+    OCMVerify([result setInjectedPropertyWithProtocols:ROCMConfirmToProtocols(@protocol(RamblerBarProtocol), @protocol(RamblerFooProtocol))]);
+    RamblerVerifySetter(result, injectedString);
 }
 
 @end
