@@ -1,9 +1,9 @@
 {
   "name": "RamblerTyphoonUtils",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "summary": "A collection of Typhoon utils and tools used by Rambler&Co.",
   "description": "Typhoon is a great tool, and iOS team in Rambler&Co loves it a lot. Besides actual contributing, we've developed some useful tools which cannot be included in the main project.\n1. RamblerInitialAssemblyCollector - this class can be used for activating assemblies on startup instead of plist integration.\n2. RamblerTyphoonAssemblyTests - A base test class used for TyphoonAssembly testing.",
-  "homepage": "https://github.com/rambler-ios/RamblerTyphoonUtils",
+  "homepage": "https://github.com/rambler-digital-solutions/RamblerTyphoonUtils",
   "license": "MIT",
   "authors": {
     "Egor Tolstoy": "e.tolstoy@rambler-co.ru",
@@ -13,8 +13,8 @@
     "Aleksandr Sychev": "a.sychev@rambler-co.ru"
   },
   "source": {
-    "git": "https://github.com/rambler-ios/RamblerTyphoonUtils.git",
-    "tag": "1.4.0"
+    "git": "https://github.com/rambler-digital-solutions/RamblerTyphoonUtils.git",
+    "tag": "1.5.1"
   },
   "social_media_url": "https://twitter.com/rambler_ios",
   "platforms": {

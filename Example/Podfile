@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'RamblerTyphoonUtils_Example', :exclusive => true do
+target 'RamblerTyphoonUtils_Example' do
   pod "Typhoon"
   pod "OCMock"
   pod "RamblerTyphoonUtils/AssemblyCollector", :path => "../"
 end
 
-target 'RamblerTyphoonUtils_Tests', :exclusive => true do
+target 'RamblerTyphoonUtils_Tests' do
   pod "RamblerTyphoonUtils", :path => "../"
 end

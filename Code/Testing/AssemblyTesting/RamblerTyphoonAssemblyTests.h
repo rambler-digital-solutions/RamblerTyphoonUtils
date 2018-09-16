@@ -39,7 +39,7 @@
 /**
  Method for testing an object, created via TyphoonAssembly, and all of its dependencies
 
- @param targetDependency     Created object
+ @param targetObject         Created object
  @param targetTypeDescriptor The target type descriptor
  @param dependencies         NSArray with dependencies names
  */
@@ -62,7 +62,7 @@
 /**
  Method for testing an object, created via TyphoonAssembly, and all of its dependencies
  
- @param targetDependency Created object
+ @param targetObject     Created object
  @param targetClass      The target class
  @param dependencies     NSArray with dependencies names
  */
@@ -82,7 +82,7 @@
 /**
  Method for testing an object, created via TyphoonAssembly, and all of its dependencies
  
- @param targetDependency    Created object
+ @param targetObject        Created object
  @param conformingProtocols NSArray with protocols
  @param dependencies        NSArray with dependencies names
  */
@@ -104,7 +104,7 @@
 /**
  Method for testing an object, created via TyphoonAssembly, and all of its dependencies
  
- @param targetDependency    Created object
+ @param targetObject        Created object
  @param targetClass         The target class
  @param conformingProtocols NSArray with protocols
  @param dependencies        NSArray with dependencies names

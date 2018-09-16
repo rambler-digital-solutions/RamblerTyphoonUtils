@@ -48,6 +48,11 @@ static TyphoonComponentFactory *uiResolvingFactory = nil;
     return defaultFactory;
 }
 
++ (instancetype)newFactoryForResolvingUI
+{
+    return [[self alloc] initFactoryForResolvingUI];
+}
+
 + (void)setFactoryForResolvingUI:(TyphoonComponentFactory *)factory
 {
     uiResolvingFactory = factory;
@@ -66,6 +71,12 @@ static TyphoonComponentFactory *uiResolvingFactory = nil;
 //-------------------------------------------------------------------------------------------
 #pragma mark - Initialization & Destruction
 //-------------------------------------------------------------------------------------------
+
+- (id)initFactoryForResolvingUI
+{
+    uiResolvingFactory = self;
+    return [self init];
+}
 
 - (id)init
 {
@@ -261,14 +272,6 @@ static TyphoonComponentFactory *uiResolvingFactory = nil;
     [_typeConverterRegistry registerTypeConverter:typeConverter];
 }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-- (void)attachPostProcessor:(id<TyphoonDefinitionPostProcessor>)postProcessor
-{
-    [self attachDefinitionPostProcessor:postProcessor];
-}
-#pragma clang diagnostic pop
-
 - (void)inject:(id)instance
 {
     @synchronized (self) {
@@ -413,7 +416,8 @@ static TyphoonComponentFactory *uiResolvingFactory = nil;
     @synchronized (self) {
         id<TyphoonComponentsPool> pool = [self poolForDefinition:definition];
         [pool setObject:instance forKey:definition.key];
-        TyphoonStackElement *element = [TyphoonStackElement elementWithKey:definition.key args:nil];
+        BOOL isPrototype = (definition.scope == TyphoonScopePrototype);
+        TyphoonStackElement *element = [TyphoonStackElement elementWithKey:definition.key args:nil isPrototype:isPrototype];
         [element takeInstance:instance];
         [_stack push:element];
         [self doInjectionEventsOn:instance withDefinition:definition args:nil];

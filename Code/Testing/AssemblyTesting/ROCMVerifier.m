@@ -7,7 +7,7 @@
 //
 
 #import "ROCMVerifier.h"
-#import "TyphoonIntrospectionUtils.h"
+#import <Typhoon/TyphoonIntrospectionUtils.h>
 #import "TyphoonTypeDescriptor.h"
 #import "RamblerTyphoonAssemblyTestUtilities.h"
 #import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"

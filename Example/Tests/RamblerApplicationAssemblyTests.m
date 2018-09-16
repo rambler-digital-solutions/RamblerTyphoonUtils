@@ -28,8 +28,7 @@
 - (void)setUp {
     [super setUp];
     
-    self.assembly = [RamblerApplicationAssembly new];
-    [self.assembly activate];
+    self.assembly = [[RamblerApplicationAssembly new] activated];
 }
 
 - (void)tearDown {

@@ -51,6 +51,13 @@
     return [[self alloc] initWithAssemblies:assemblies];
 }
 
++ (id)factoryForResolvingUIWithAssemblies:(NSArray *)assemblies
+{
+    TyphoonBlockComponentFactory *factory = [self newFactoryForResolvingUI];
+    [factory setupWithAssemblies:assemblies];
+    return factory;
+}
+
 //-------------------------------------------------------------------------------------------
 #pragma mark - Initialization & Destruction
 //-------------------------------------------------------------------------------------------
@@ -64,18 +71,23 @@
 {
     self = [super init];
     if (self) {
-        [self attachDefinitionPostProcessor:[TyphoonAssemblyPropertyInjectionPostProcessor new]];
-        TyphoonPreattachedComponentsRegisterer *preattachedComponentsRegisterer = [[TyphoonPreattachedComponentsRegisterer alloc] initWithComponentFactory:self];
-        
-        for (TyphoonAssembly *assembly in assemblies) {
-            [preattachedComponentsRegisterer doRegistrationForAssembly:assembly];
-            [self buildAssembly:assembly];
-            [assembly activateWithFactory:self collaborators:[NSSet setWithArray:assemblies]];
-        }
-        
-        [TyphoonMemoryManagementUtils makeFactory:self retainAssemblies:[NSSet setWithArray:assemblies]];
+        [self setupWithAssemblies:assemblies];
     }
     return self;
+}
+
+- (void)setupWithAssemblies:(NSArray *)assemblies
+{
+    [self attachDefinitionPostProcessor:[TyphoonAssemblyPropertyInjectionPostProcessor new]];
+    TyphoonPreattachedComponentsRegisterer *preattachedComponentsRegisterer = [[TyphoonPreattachedComponentsRegisterer alloc] initWithComponentFactory:self];
+    
+    for (TyphoonAssembly *assembly in assemblies) {
+        [preattachedComponentsRegisterer doRegistrationForAssembly:assembly];
+        [self buildAssembly:assembly];
+        [assembly activateWithFactory:self collaborators:[NSSet setWithArray:assemblies]];
+    }
+    
+    [TyphoonMemoryManagementUtils makeFactory:self retainAssemblies:[NSSet setWithArray:assemblies]];
 }
 
 - (void)buildAssembly:(TyphoonAssembly*)assembly
@@ -111,39 +123,60 @@
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    NSString *componentKey = NSStringFromSelector([invocation selector]);
-    LogTrace(@"Component key: %@", componentKey);
-
-    TyphoonRuntimeArguments *args = [TyphoonRuntimeArguments argumentsFromInvocation:invocation];
-
-    NSInvocation *internalInvocation =
-            [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(componentForKey:args:)]];
-    [internalInvocation setSelector:@selector(componentForKey:args:)];
-    [internalInvocation setArgument:&componentKey atIndex:2];
-    [internalInvocation setArgument:&args atIndex:3];
-    [internalInvocation invokeWithTarget:self];
-
-    void *returnValue;
-    [internalInvocation getReturnValue:&returnValue];
-    [invocation setReturnValue:&returnValue];
+    @synchronized (self) {
+        
+        NSString *componentKey = NSStringFromSelector([invocation selector]);
+        LogTrace(@"Component key: %@", componentKey);
+        
+        TyphoonRuntimeArguments *args = [TyphoonRuntimeArguments argumentsFromInvocation:invocation];
+        
+        NSInvocation *internalInvocation =
+        [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:@selector(componentForKey:args:)]];
+        [internalInvocation setSelector:@selector(componentForKey:args:)];
+        [internalInvocation setArgument:&componentKey atIndex:2];
+        [internalInvocation setArgument:&args atIndex:3];
+        [internalInvocation invokeWithTarget:self];
+        
+        void *returnValue;
+        [internalInvocation getReturnValue:&returnValue];
+        [invocation setReturnValue:&returnValue];
+    }
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
-    if ([self respondsToSelector:aSelector]) {
-        return [[self class] instanceMethodSignatureForSelector:aSelector];
+    @synchronized (self) {
+        
+        if ([super respondsToSelector:aSelector]) {
+            return [[self class] instanceMethodSignatureForSelector:aSelector];
+        }
+        
+        NSString *componentKey = NSStringFromSelector(aSelector);
+        TyphoonDefinition *definition = [self definitionForKey:componentKey];
+        TyphoonAssembly *assembly = definition.assembly;
+        
+        if (assembly) {
+            return [assembly methodSignatureForSelector:aSelector];
+        }
+        
+        // Last resort.
+        return [TyphoonIntrospectionUtils methodSignatureWithArgumentsAndReturnValueAsObjectsFromSelector:aSelector];
+    }
+}
+
+- (BOOL)respondsToSelector:(SEL)aSelector
+{
+    if ([super respondsToSelector:aSelector]){
+        return YES;
     }
     
-    NSString *componentKey = NSStringFromSelector(aSelector);
-    TyphoonDefinition *definition = [self definitionForKey:componentKey];
-    TyphoonAssembly *assembly = definition.assembly;
+    NSString *key = NSStringFromSelector(aSelector);
+    TyphoonDefinition *definition = [self definitionForKey:key];
     
-    if (assembly) {
-        return [assembly methodSignatureForSelector:aSelector];
+    if (definition) {
+        return YES;
     }
-    
-    // Last resort.
-    return [TyphoonIntrospectionUtils methodSignatureWithArgumentsAndReturnValueAsObjectsFromSelector:aSelector];
+    return NO;
 }
 
 @end

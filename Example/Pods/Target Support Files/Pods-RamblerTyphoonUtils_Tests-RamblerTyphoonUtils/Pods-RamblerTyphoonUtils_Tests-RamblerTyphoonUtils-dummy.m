@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_RamblerTyphoonUtils_Tests_RamblerTyphoonUtils : NSObject
-@end
-@implementation PodsDummy_Pods_RamblerTyphoonUtils_Tests_RamblerTyphoonUtils
-@end
