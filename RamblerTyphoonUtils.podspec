@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RamblerTyphoonUtils"
-  s.version          = "1.5.0"
+  s.version          = "1.5.1"
   s.summary          = "A collection of Typhoon utils and tools used by Rambler&Co."
 
   s.description      = <<-DESC
@@ -29,5 +29,5 @@ Pod::Spec.new do |s|
     subspec.framework = 'XCTest'
     subspec.user_target_xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PLATFORM_DIR)/Developer/Library/Frameworks' }
     subspec.dependency 'OCMock', '~> 3'
-  end  
+  end
 end
