@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OCMConstraint.h"
+#import <OCMock/OCMConstraint.h>
 
 /**
  OCMock constraint checks the argument whether it is a subclass of type

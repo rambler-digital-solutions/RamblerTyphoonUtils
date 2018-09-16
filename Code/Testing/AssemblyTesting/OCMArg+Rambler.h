@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OCMArg.h"
+#import <OCMock/OCMArg.h>
 
 #define ROCMConfirmToProtocols(first, ...) ([OCMArg rds_checkConfirmToProtocolsArray:@[first, ##__VA_ARGS__]])
 

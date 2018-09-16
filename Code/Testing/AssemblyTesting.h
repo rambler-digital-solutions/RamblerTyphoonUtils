@@ -9,12 +9,12 @@
 #ifndef _RamblerTyphoonUtils_AssemblyTesting_h_
 #define _RamblerTyphoonUtils_AssemblyTesting_h_
 
-#import "RamblerTyphoonAssemblyTests.h"
-#import "RamblerTyphoonAssemblyTestUtilities.h"
-#import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"
-#import "OCMArg+Rambler.h"
-#import "ROCMClassConstraint.h"
-#import "ROCMProtocolConstraint.h"
-#import "ROCMVerifier.h"
+#import <RamblerTyphoonUtils/RamblerTyphoonAssemblyTests.h>
+#import <RamblerTyphoonUtils/RamblerTyphoonAssemblyTestUtilities.h>
+#import <RamblerTyphoonUtils/RamblerTyphoonAssemblyTestsTypeDescriptor.h>
+#import <RamblerTyphoonUtils/OCMArg+Rambler.h>
+#import <RamblerTyphoonUtils/ROCMClassConstraint.h>
+#import <RamblerTyphoonUtils/ROCMProtocolConstraint.h>
+#import <RamblerTyphoonUtils/ROCMVerifier.h>
 
 #endif

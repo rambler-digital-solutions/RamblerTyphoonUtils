@@ -10,7 +10,7 @@
 
 #import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"
 #import "RamblerTyphoonAssemblyTestUtilities.h"
-#import "OCMock.h"
+#import <OCMock/OCMock.h>
 
 @interface RamblerTyphoonAssemblyTests ()
 

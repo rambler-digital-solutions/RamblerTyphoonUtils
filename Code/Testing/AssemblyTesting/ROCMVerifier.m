@@ -7,12 +7,10 @@
 //
 
 #import "ROCMVerifier.h"
-#import <Typhoon/TyphoonIntrospectionUtils.h>
-#import "TyphoonTypeDescriptor.h"
 #import "RamblerTyphoonAssemblyTestUtilities.h"
 #import "RamblerTyphoonAssemblyTestsTypeDescriptor.h"
 #import "OCMArg+Rambler.h"
-#import "OCMock.h"
+#import <OCMock/OCMock.h>
 
 @implementation ROCMVerifier
 

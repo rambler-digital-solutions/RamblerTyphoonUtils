@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OCMConstraint.h"
+#import <OCMock/OCMConstraint.h>
     
 /**
  OCMock constraint checks the argument to conform protocols

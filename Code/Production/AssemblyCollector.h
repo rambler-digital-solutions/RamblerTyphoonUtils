@@ -9,8 +9,8 @@
 #ifndef _RamblerTyphoonUtils_AssemblyCollector_h_
 #define _RamblerTyphoonUtils_AssemblyCollector_h_
 
-#import "RamblerInitialAssembly.h"
-#import "RamblerInitialAssemblyCollector.h"
+#import <RamblerTyphoonUtils/RamblerInitialAssembly.h>
+#import <RamblerTyphoonUtils/RamblerInitialAssemblyCollector.h>
 
 #endif
 

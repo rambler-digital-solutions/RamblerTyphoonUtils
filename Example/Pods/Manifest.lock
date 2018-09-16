@@ -1,5 +1,5 @@
 PODS:
-  - OCMock (3.3.1)
+  - OCMock (3.4.2)
   - RamblerTyphoonUtils (1.5.1):
     - RamblerTyphoonUtils/AssemblyCollector (= 1.5.1)
     - RamblerTyphoonUtils/AssemblyTesting (= 1.5.1)
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
+  OCMock: ebe9ee1dca7fbed0ff9193ac0b3e2d8862ea56f6
   RamblerTyphoonUtils: 0d2f8a61d6416dba32ec8ba36f8eaae5a26e1724
   Typhoon: 58ae5754d3d0aa819119d8c107aed0dd67f1eb3b
 
